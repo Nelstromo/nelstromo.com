@@ -1,0 +1,4 @@
+Name,Service Type,Purpose,Metered UoM,Metered UoM Reported,Billed UoM,Billed UoM Reported,Energy Source,Flow,Season,Time & Flow (Significance),Has Device,Control Number,Is Summary
+100 Cubic Feet Usage,Water,Yes,PSA25070919688,,No,,,,,,,,
+100 Cubic Feet Usage,Sewer,No,PSA25070919688,,No,,,,,,,,
+CCF Usage,Water,Yes,HLC25070400535,,No,,,,,,,,

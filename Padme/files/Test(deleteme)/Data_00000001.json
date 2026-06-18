@@ -1,0 +1,1379 @@
+﻿{
+    "Version": "1.1",
+    "Documents": [
+        {
+            "DocumentState": "Correct",
+            "DocumentData": { 
+                "Name": "UtilityBill1", "$type": "Document", "Fields": [
+                    {
+                        "Name": "ProviderID",
+                        "$type": "Text",
+                        "Value": "20257"
+                    },
+                    {
+                        "Name": "ProviderName",
+                        "$type": "Text",
+                        "Value": "Baton Rouge Water Company"
+                    },
+                    {
+                        "Name": "ControlNumber",
+                        "$type": "Text",
+                        "Value": "HIC25050700081"
+                    },
+                    {
+                        "Name": "BillTotal",
+                        "$type": "Currency",
+                        "Value": null
+                    },
+                    {
+                        "Name": "BillAccountNumber",
+                        "$type": "Text",
+                        "Value": ""
+                    },
+                    {
+                        "Name": "IsNegative",
+                        "$type": "Checkmark",
+                        "Value": false
+                    },
+                    {
+                        "Name": "MailingAddress",
+                        "$type": "Text",
+                        "Value": ""
+                    },
+                    {
+                        "Name": "RemitAddress",
+                        "$type": "Text",
+                        "Value": ""
+                    },
+                    {
+                        "Name": "ProhibitedElement",
+                        "$type": "Text",
+                        "Value": ""
+                    },
+                    {
+                        "Name": "AccountInvoice",
+                        "$type": "Group",
+                        "Items": [
+                            {
+                                "Fields": [
+                                    {
+                                        "Name": "AccountNumber",
+                                        "$type": "Text",
+                                        "Value": "010119743050301"
+                                    },
+                                    {
+                                        "Name": "CustomerName",
+                                        "$type": "Text",
+                                        "Value": "WOODLANDS BATON ROUGE"
+                                    },
+                                    {
+                                        "Name": "CustomerNumber",
+                                        "$type": "Text",
+                                        "Value": ""
+                                    },
+                                    {
+                                        "Name": "InvoiceNumber",
+                                        "$type": "Text",
+                                        "Value": ""
+                                    },
+                                    {
+                                        "Name": "InvoiceType",
+                                        "$type": "Text",
+                                        "Value": ""
+                                    },
+                                    {
+                                        "Name": "InvoiceTypeID",
+                                        "$type": "Text",
+                                        "Value": ""
+                                    },
+                                    {
+                                        "Name": "TotalDue",
+                                        "$type": "Currency",
+                                        "Value": -538.12
+                                    },
+                                    {
+                                        "Name": "IsNegative",
+                                        "$type": "Checkmark",
+                                        "Value": true
+                                    },
+                                    {
+                                        "Name": "BillDate",
+                                        "$type": "DateTime",
+                                        "Value": "2025-04-28"
+                                    },
+                                    {
+                                        "Name": "DueDate",
+                                        "$type": "DateTime",
+                                        "Value": null
+                                    },
+                                    {
+                                        "Name": "MailedDate",
+                                        "$type": "DateTime",
+                                        "Value": null
+                                    },
+                                    {
+                                        "Name": "LateFeeDeadline",
+                                        "$type": "DateTime",
+                                        "Value": null
+                                    },
+                                    {
+                                        "Name": "NextStatementDate",
+                                        "$type": "DateTime",
+                                        "Value": null
+                                    },
+                                    {
+                                        "Name": "NextReadOn",
+                                        "$type": "DateTime",
+                                        "Value": null
+                                    },
+                                    {
+                                        "Name": "ChargeGroup",
+                                        "$type": "Group",
+                                        "Items": [
+                                            {
+                                                "Fields": [
+                                                    {
+                                                        "Name": "ServicePeriod",
+                                                        "$type": "Text",
+                                                        "Value": ""
+                                                    },
+                                                    {
+                                                        "Name": "ServicePeriodText",
+                                                        "$type": "Text",
+                                                        "Value": ""
+                                                    },
+                                                    {
+                                                        "Name": "ServiceStartAt",
+                                                        "$type": "DateTime",
+                                                        "Value": null
+                                                    },
+                                                    {
+                                                        "Name": "ServiceEndAt",
+                                                        "$type": "DateTime",
+                                                        "Value": null
+                                                    },
+                                                    {
+                                                        "Name": "DaysOfService",
+                                                        "$type": "Text",
+                                                        "Value": ""
+                                                    },
+                                                    {
+                                                        "Name": "ServiceDate",
+                                                        "$type": "DateTime",
+                                                        "Value": null
+                                                    },
+                                                    {
+                                                        "Name": "TotalCharge",
+                                                        "$type": "Currency",
+                                                        "Value": null
+                                                    },
+                                                    {
+                                                        "Name": "LineItemCharge",
+                                                        "$type": "Group",
+                                                        "Items": [
+                                                            {
+                                                                "Fields": [
+                                                                    {
+                                                                        "Name": "Description",
+                                                                        "$type": "Text",
+                                                                        "Value": "Balance Forward"
+                                                                    },
+                                                                    {
+                                                                        "Name": "Amount",
+                                                                        "$type": "Currency",
+                                                                        "Value": 584.47
+                                                                    },
+                                                                    {
+                                                                        "Name": "IsNegative",
+                                                                        "$type": "Checkmark",
+                                                                        "Value": false
+                                                                    },
+                                                                    {
+                                                                        "Name": "Equation",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "Tier",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriod",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriodText",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceStartAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceEndAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "Fields": [
+                                                                    {
+                                                                        "Name": "Description",
+                                                                        "$type": "Text",
+                                                                        "Value": "Balance Forward - Water Service"
+                                                                    },
+                                                                    {
+                                                                        "Name": "Amount",
+                                                                        "$type": "Currency",
+                                                                        "Value": 0.00
+                                                                    },
+                                                                    {
+                                                                        "Name": "IsNegative",
+                                                                        "$type": "Checkmark",
+                                                                        "Value": false
+                                                                    },
+                                                                    {
+                                                                        "Name": "Equation",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "Tier",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriod",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriodText",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceStartAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceEndAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "Fields": [
+                                                                    {
+                                                                        "Name": "Description",
+                                                                        "$type": "Text",
+                                                                        "Value": "Balance Forward - Sewer Service"
+                                                                    },
+                                                                    {
+                                                                        "Name": "Amount",
+                                                                        "$type": "Currency",
+                                                                        "Value": -84.47
+                                                                    },
+                                                                    {
+                                                                        "Name": "IsNegative",
+                                                                        "$type": "Checkmark",
+                                                                        "Value": false
+                                                                    },
+                                                                    {
+                                                                        "Name": "Equation",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "Tier",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriod",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriodText",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceStartAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceEndAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "Fields": [
+                                                                    {
+                                                                        "Name": "Description",
+                                                                        "$type": "Text",
+                                                                        "Value": "Current Charges"
+                                                                    },
+                                                                    {
+                                                                        "Name": "Amount",
+                                                                        "$type": "Currency",
+                                                                        "Value": 46.35
+                                                                    },
+                                                                    {
+                                                                        "Name": "IsNegative",
+                                                                        "$type": "Checkmark",
+                                                                        "Value": false
+                                                                    },
+                                                                    {
+                                                                        "Name": "Equation",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "Tier",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriod",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriodText",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceStartAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceEndAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "Fields": [
+                                                                    {
+                                                                        "Name": "Description",
+                                                                        "$type": "Text",
+                                                                        "Value": "Water Service"
+                                                                    },
+                                                                    {
+                                                                        "Name": "Amount",
+                                                                        "$type": "Currency",
+                                                                        "Value": 11.05
+                                                                    },
+                                                                    {
+                                                                        "Name": "IsNegative",
+                                                                        "$type": "Checkmark",
+                                                                        "Value": false
+                                                                    },
+                                                                    {
+                                                                        "Name": "Equation",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "Tier",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriod",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriodText",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceStartAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceEndAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "Fields": [
+                                                                    {
+                                                                        "Name": "Description",
+                                                                        "$type": "Text",
+                                                                        "Value": "Sewer Service"
+                                                                    },
+                                                                    {
+                                                                        "Name": "Amount",
+                                                                        "$type": "Currency",
+                                                                        "Value": 35.30
+                                                                    },
+                                                                    {
+                                                                        "Name": "IsNegative",
+                                                                        "$type": "Checkmark",
+                                                                        "Value": false
+                                                                    },
+                                                                    {
+                                                                        "Name": "Equation",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "Tier",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriod",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriodText",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceStartAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceEndAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "Name": "LineItemHeader",
+                                                        "$type": "Group"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "Name": "Address",
+                                        "$type": "Group",
+                                        "Items": [
+                                            {
+                                                "Fields": [
+                                                    {
+                                                        "Name": "ServiceAddress",
+                                                        "$type": "Text",
+                                                        "Value": "910 Ben Hur Rd 330"
+                                                    },
+                                                    {
+                                                        "Name": "LocationID",
+                                                        "$type": "Text",
+                                                        "Value": ""
+                                                    },
+                                                    {
+                                                        "Name": "ServiceChargeGroup",
+                                                        "$type": "Group",
+                                                        "Items": [
+                                                            {
+                                                                "Fields": [
+                                                                    {
+                                                                        "Name": "ServicePeriod",
+                                                                        "$type": "Text",
+                                                                        "Value": "April 2025"
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServicePeriodText",
+                                                                        "$type": "Text",
+                                                                        "Value": "April 2025"
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceStartAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": "2025-04-01"
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceEndAt",
+                                                                        "$type": "DateTime",
+                                                                        "Value": "2025-04-30"
+                                                                    },
+                                                                    {
+                                                                        "Name": "DaysOfService",
+                                                                        "$type": "Number",
+                                                                        "Value": null
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceDate",
+                                                                        "$type": "DateTime",
+                                                                        "Value": null
+                                                                    },
+                                                                    {
+                                                                        "Name": "ServiceContractNumber",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "RateSchedule",
+                                                                        "$type": "Text",
+                                                                        "Value": ""
+                                                                    },
+                                                                    {
+                                                                        "Name": "TotalCharge",
+                                                                        "$type": "Currency",
+                                                                        "Value": null
+                                                                    },
+                                                                    {
+                                                                        "Name": "LineItemCharge3",
+                                                                        "$type": "Group"
+                                                                    },
+                                                                    {
+                                                                        "Name": "LineItemHeader1",
+                                                                        "$type": "Group",
+                                                                        "Items": [
+                                                                            {
+                                                                                "Fields": [
+                                                                                    {
+                                                                                        "Name": "Header",
+                                                                                        "$type": "Text",
+                                                                                        "Value": "Water Service"
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "RateSchedule",
+                                                                                        "$type": "Text",
+                                                                                        "Value": ""
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "LineItemCharge4",
+                                                                                        "$type": "Group",
+                                                                                        "Items": [
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "Description",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "Balance Forward - Water Service"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Tier",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Amount",
+                                                                                                        "$type": "Currency",
+                                                                                                        "Value": 0.00
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "IsNegative",
+                                                                                                        "$type": "Checkmark",
+                                                                                                        "Value": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Equation",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriod",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriodText",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceStartAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceEndAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "Description",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "Water Service"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Tier",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Amount",
+                                                                                                        "$type": "Currency",
+                                                                                                        "Value": 10.00
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "IsNegative",
+                                                                                                        "$type": "Checkmark",
+                                                                                                        "Value": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Equation",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriod",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriodText",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceStartAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceEndAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "Description",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "LA DHH OPH SDWA Fee"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Tier",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Amount",
+                                                                                                        "$type": "Currency",
+                                                                                                        "Value": 1.00
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "IsNegative",
+                                                                                                        "$type": "Checkmark",
+                                                                                                        "Value": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Equation",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriod",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriodText",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceStartAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceEndAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "Description",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "Groundwater Fee"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Tier",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Amount",
+                                                                                                        "$type": "Currency",
+                                                                                                        "Value": 0.05
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "IsNegative",
+                                                                                                        "$type": "Checkmark",
+                                                                                                        "Value": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Equation",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriod",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriodText",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceStartAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceEndAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "Description",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "Water and Service Fees Current Charges"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Tier",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Amount",
+                                                                                                        "$type": "Currency",
+                                                                                                        "Value": 11.05
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "IsNegative",
+                                                                                                        "$type": "Checkmark",
+                                                                                                        "Value": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Equation",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriod",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriodText",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceStartAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceEndAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "Description",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "Water and Service Fees Total Charges"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Tier",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Amount",
+                                                                                                        "$type": "Currency",
+                                                                                                        "Value": 11.05
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "IsNegative",
+                                                                                                        "$type": "Checkmark",
+                                                                                                        "Value": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Equation",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriod",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriodText",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceStartAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceEndAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "LineItemSubHeader1",
+                                                                                        "$type": "Group"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "Fields": [
+                                                                                    {
+                                                                                        "Name": "Header",
+                                                                                        "$type": "Text",
+                                                                                        "Value": "Sewer Service"
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "RateSchedule",
+                                                                                        "$type": "Text",
+                                                                                        "Value": ""
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "LineItemCharge4",
+                                                                                        "$type": "Group",
+                                                                                        "Items": [
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "Description",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "Balance Forward - Sewer Service"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Tier",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Amount",
+                                                                                                        "$type": "Currency",
+                                                                                                        "Value": -584.47
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "IsNegative",
+                                                                                                        "$type": "Checkmark",
+                                                                                                        "Value": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Equation",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriod",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriodText",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceStartAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceEndAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "Description",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "Sewer"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Tier",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Amount",
+                                                                                                        "$type": "Currency",
+                                                                                                        "Value": 35.30
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "IsNegative",
+                                                                                                        "$type": "Checkmark",
+                                                                                                        "Value": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Equation",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "4.8 Units"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriod",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriodText",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceStartAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceEndAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "Description",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "Water and Service Fees Current Charges"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Tier",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Amount",
+                                                                                                        "$type": "Currency",
+                                                                                                        "Value": 35.30
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "IsNegative",
+                                                                                                        "$type": "Checkmark",
+                                                                                                        "Value": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Equation",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriod",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriodText",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceStartAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceEndAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "Description",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": "Water and Service Fees Total Charges"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Tier",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Amount",
+                                                                                                        "$type": "Currency",
+                                                                                                        "Value": -549.17
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "IsNegative",
+                                                                                                        "$type": "Checkmark",
+                                                                                                        "Value": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "Equation",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriod",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServicePeriodText",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceStartAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "ServiceEndAt",
+                                                                                                        "$type": "DateTime",
+                                                                                                        "Value": null
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "LineItemSubHeader1",
+                                                                                        "$type": "Group"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "Name": "MeterGroup",
+                                                                        "$type": "Group",
+                                                                        "Items": [
+                                                                            {
+                                                                                "Fields": [
+                                                                                    {
+                                                                                        "Name": "ServicePeriod",
+                                                                                        "$type": "Text",
+                                                                                        "Value": ""
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "ServicePeriodText",
+                                                                                        "$type": "Text",
+                                                                                        "Value": ""
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "ServiceStart",
+                                                                                        "$type": "DateTime",
+                                                                                        "Value": null
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "ServiceEnd",
+                                                                                        "$type": "DateTime",
+                                                                                        "Value": null
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "DaysOfService",
+                                                                                        "$type": "Text",
+                                                                                        "Value": ""
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "TotalMeteredUsage",
+                                                                                        "$type": "Number",
+                                                                                        "Value": null
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "TotalMeteredUsageUnitOfMeasure",
+                                                                                        "$type": "Text",
+                                                                                        "Value": ""
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "TotalConvertedUsage",
+                                                                                        "$type": "Number",
+                                                                                        "Value": null
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "TotalConvertedUsageUnitOfMeasure",
+                                                                                        "$type": "Text",
+                                                                                        "Value": ""
+                                                                                    },
+                                                                                    {
+                                                                                        "Name": "Meter",
+                                                                                        "$type": "Group",
+                                                                                        "Items": [
+                                                                                            {
+                                                                                                "Fields": [
+                                                                                                    {
+                                                                                                        "Name": "MeterNumber",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "MeasureName",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "MeasureNameHeader",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "MeasurePurposeHeader",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "MeasureSignificanceHeader",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "MeasureSeasonHeader",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "MeasureElectricityFlowHeader",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "TotalMeteredUsage",
+                                                                                                        "$type": "Number",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "TotalMeteredUsageUnitOfMeasure",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "TotalConvertedUsage",
+                                                                                                        "$type": "Number",
+                                                                                                        "Value": null
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "TotalConvertedUsageUnitOfMeasure",
+                                                                                                        "$type": "Text",
+                                                                                                        "Value": ""
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "Name": "MeterRead",
+                                                                                                        "$type": "Group",
+                                                                                                        "Items": [
+                                                                                                            {
+                                                                                                                "Fields": [
+                                                                                                                    {
+                                                                                                                        "Name": "MeasureName",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "MeasurePurpose",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "MeasureSignificance",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "MeasureSeason",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "MeasureElectricityFlow",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "ServicePeriod",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "ServicePeriodText",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "CurrentReadAt",
+                                                                                                                        "$type": "DateTime",
+                                                                                                                        "Value": "2025-04-28"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "CurrentRead",
+                                                                                                                        "$type": "Number",
+                                                                                                                        "Value": 621
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "CurrentReadType",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "PreviousReadAt",
+                                                                                                                        "$type": "DateTime",
+                                                                                                                        "Value": "2025-03-27"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "PreviousRead",
+                                                                                                                        "$type": "Number",
+                                                                                                                        "Value": 619
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "PreviousReadType",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "ReadDifference",
+                                                                                                                        "$type": "Number",
+                                                                                                                        "Value": null
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "ReadUnitOfMeasure",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "DaysOfService",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": "32"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "NextReadOn",
+                                                                                                                        "$type": "DateTime",
+                                                                                                                        "Value": null
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "MeterRollover",
+                                                                                                                        "$type": "Checkmark",
+                                                                                                                        "Value": false
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "MeterMultiplier",
+                                                                                                                        "$type": "Number",
+                                                                                                                        "Value": null
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "AdjustmentFactor",
+                                                                                                                        "$type": "Number",
+                                                                                                                        "Value": null
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "MeteredUsage",
+                                                                                                                        "$type": "Number",
+                                                                                                                        "Value": 2
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "MeteredUsageUnitOfMeasure",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "ConversionFactor",
+                                                                                                                        "$type": "Number",
+                                                                                                                        "Value": null
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "ConvertedUsage",
+                                                                                                                        "$type": "Number",
+                                                                                                                        "Value": null
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "ConvertedUsageUnitOfMeasure",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "BilledUsage",
+                                                                                                                        "$type": "Number",
+                                                                                                                        "Value": null
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "Name": "BilledUsageUnitOfMeasure",
+                                                                                                                        "$type": "Text",
+                                                                                                                        "Value": ""
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "FailureReason",
+                        "$type": "Text",
+                        "Value": ""
+                    }
+                ]
+            }
+        }
+    ]
+}

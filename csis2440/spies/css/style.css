@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    background-color: #000;
+    color: #0ff;
+    font-family: 'Orbitron', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #111;
+    padding: 2rem;
+    border: 2px solid #f80;
+    box-shadow: 0 0 20px #f80;
+    border-radius: 10px;
+}
+
+h1, h4, p, label {
+    color: #f80;
+    text-shadow: 0 0 4px #f80;
+}
+
+input, select, button {
+    background-color: #000;
+    border: 1px solid #0ff;
+    color: #0ff;
+    padding: 0.5rem;
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type="submit"], button {
+    background-color: #0ff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.resetBtn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #f00;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #f00;
+}
+
+.resetBtn:hover {
+    background-color: #900;
+}
+
+.infoTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.infoTable th, .infoTable td {
+    border: 1px solid #f80;
+    padding: 0.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.infoTable tr:nth-child(even) {
+    background-color: #222;
+}
+
+.grantedScreen {
+    border: 2px solid #0f0;
+    padding: 1rem;
+    background-color: #002200;
+    box-shadow: 0 0 15px #0f0;
+}
+
+.deniedMSG {
+    border: 2px solid #f00;
+    padding: 1rem;
+    background-color: #220000;
+    box-shadow: 0 0 15px #f00;
+}

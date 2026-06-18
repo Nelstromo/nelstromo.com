@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Build-A-Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <h1>Build-A-Bot!</h1>
+    <div id="form-container"> 
+        <div id="robot-form"> 
+            <label>Safety
+                <select id="safety">
+                    <option value="sharp">Normal</option>
+                    <option value="rounded">Child Safe</option>
+                </select>
+            </label>
+
+            <label>Head Style
+                <select id="headStyle">
+                    <option value="round">Round</option>
+                    <option value="square">Square</option>
+                </select>
+            </label>
+
+            <label>Evil/Good
+                <select id="alignment"> 
+                    <option value="good">Good</option>
+                    <option value="evil">Evil</option>
+                </select>
+            </label>
+
+            <label>Eye Style
+                <select id="eyes"> 
+                    <option value="square">Square</option>
+                    <option value="round">Round</option>
+                </select>
+            </label>
+
+            <label>Eye Color
+                <input type="color" id="eyeColor" value="#ffffff">
+            </label>
+
+            <label>Robot Color
+                <input type="color" id="robotColor" value="#c0c0c0">
+            </label>
+
+            <button id="reset-btn">Reset</button>
+            <button id="shuffle-btn">Randomize</button>
+
+        </div>
+
+        <div id="robot">
+            <div class="left">
+                <div id="lArm"></div>
+            </div>
+            <div class="middle">
+                <div class="middle2">
+                    <div id="head">
+                        <div class="eye left-eye">
+                            <div class="pupil"></div>
+                        </div>
+                        <div class="eye right-eye">
+                            <div class="pupil"></div>
+                        </div>
+                        <div id="mouth"></div>
+                    </div>
+                    <div id="body"></div>
+                </div>
+                <div class="legs">
+                    <div id="lLeg"></div>
+                    <div id="rLeg"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="rArm"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

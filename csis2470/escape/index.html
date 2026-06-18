@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Escape</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="instructions" class="msg">
+        <div class="msg-content">
+            <h2>Hello There!</h2>
+            <p>Use the arrow keys to move.<br>Help it escape through the gates!</p>
+            <button id="closeInstructions">Start Game</button>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="top">
+            <div class="topZero"></div>
+            <div class="topOne"></div>
+            <div class="topTwo"></div>
+            <div class="topThree"></div>
+            <div class="topFour"></div>
+        </div>
+
+        <div class="middle">
+            <div class="middleZero"></div>
+            <div class="middleOne"></div>
+            <div class="middleTwo"><img id="robot" src="img/robot.png"></div>
+            <div class="middleThree"></div>
+            <div class="middleFour"></div>
+        </div>
+
+        <div class="bottom">
+            <div class="bottomZero"></div>
+            <div class="bottomOne"></div>
+            <div class="bottomTwo"></div>
+            <div class="bottomThree"></div>
+            <div class="bottomFour"></div>
+        </div>
+    </div>
+
+    <div id="gameEnd" class="msg" style="display: none;">
+        <div class="msg-content">
+            <p id="win" class="win">Thanks For Helping Me Escape!</p>
+            <button id="playAgain" type="submit">Play Again</button>
+        </div>
+    </div>
+
+    <div id="grass"></div>
+</body>
+
+</html>

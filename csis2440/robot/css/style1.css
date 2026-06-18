@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+/* ==============================================================================
+   General Base Styling & Font
+================================================================================== */
+body {
+    margin: 0;
+    background-color: #0d0d0d;
+    font-family: 'Orbitron', sans-serif; /* Techy font */
+}
+
+h1, h4, p {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff99;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* =============================
+   Link Hover Effect 
+============================= */
+a {
+    color: #00ffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 4px #00ffffaa;
+}
+
+/* =============================
+   General Form Elements
+============================= */
+label {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff99;
+}
+input, select, button {
+    background-color: #000;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    padding: 0.6rem;
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #00ffff55;
+}
+
+input[type="submit"], button {
+    background-color: #00ffff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* =============================
+   General Form Elements
+============================= */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #111111;
+    padding: 2rem;
+    padding-top: 1rem;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff88;
+    border-radius: 10px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+.page-header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0 0 5px #00ffffaa;
+}   
+.page-header p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0 0 5px #00ffffaa;
+}
+
+
+/* =============================
+   File Selection
+============================= */
+.fileSelection {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #111111;
+    padding: 2rem;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff88;
+    border-radius: 10px;
+}
+
+/* =============================
+   File Info Table (Data Display)
+============================= */
+.infoTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    box-shadow: 0 0 15px #00ffff55;
+}
+
+.infoTable th {
+    border: 1px solid #00ffff;
+    padding: 0.75rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #111;
+}
+
+.infoTable td {
+    border: 1px solid #00ffff;
+    padding: 0.75rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #111;
+    word-wrap: break-word; 
+    white-space: normal;
+    max-width: 300px;  
+}
+
+.infoTable th {
+    background-color: #003333;
+    color: #00ffff;
+    text-shadow: 0 0 4px #00ffffaa;
+}
+
+.infoTable tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+
+
+
+/* ==============================================================================
+   Create Robot Page
+================================================================================== */
+form.create-robot-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #111111;
+    padding: 2rem;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff88;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.create-robot-form label {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff99;
+}
+.create-robot-form input, select, button {
+    background-color: #000;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    padding: 0.6rem;
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #00ffff55;
+}
+
+.create-robot-form input[type="submit"], button {
+    background-color: #00ffff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.create-robot-form input[type="submit"]:hover, button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.robot-created {
+    border: none;
+    padding: 4px 8px;
+    background-color: #004400;
+    box-shadow: 0 0 8px #00ff00aa;
+    margin-top: 6px;
+    border-radius: 4px;
+    display: block;
+    margin: 6px auto;
+    max-width: 400px;
+    text-align: center; 
+}
+
+.robot-created-title {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #00ff00;
+    text-shadow: 0 0 3px #00ff00aa;
+}
+
+
+.robot-pic-half {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00aa;
+    display: block;
+    margin: 0 auto 1rem;
+}

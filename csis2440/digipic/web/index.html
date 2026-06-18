@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digipick Web</title>
+  <style>
+    html, body { height: 100%; margin: 0; background: #e9e9e9; font-family: system-ui, sans-serif; }
+    #root { display: grid; place-items: center; height: 100%; }
+    canvas { background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2); image-rendering: pixelated; }
+    .hud { position: fixed; top: 12px; left: 12px; color: #222; font-size: 14px; }
+    .hud kbd{ padding:2px 6px; border:1px solid #999; border-bottom-width:2px; border-radius:4px; background:#fff; }
+  </style>
+</head>
+<body>
+  <div class="hud">
+    Controls: <kbd>←</kbd><kbd>→</kbd> change pick, <kbd>↑</kbd><kbd>↓</kbd> jump pick, <kbd>Space</kbd> slot, <kbd>Right Shift</kbd> undo.
+  </div>
+  <div id="root"></div>
+  <script type="module" src="./main-web.js"></script>
+</body>
+</html>

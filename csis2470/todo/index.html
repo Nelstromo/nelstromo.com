@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1></h1> My To-Do List</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Enter a new task...">
+            </div>
+
+            <div class="priority-group">
+                <button class="priority-btn high" data-priority="high">High Priority</button>
+                <button class="priority-btn med active" data-priority="med">Medium Priority</button>
+                <button class="priority-btn low" data-priority="low">Low Priority</button>
+            </div>
+
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <div id="taskList"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

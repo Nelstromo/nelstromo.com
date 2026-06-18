@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Space</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="main" id="main">
+        <div class="container">
+            <form method="post" id="spaceForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" autocomplete="off" placeholder="e.g., Zohnny"
+                    required>
+                <small class="error"></small>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" autocomplete="off" placeholder="e.g., Hexdiver" required>
+                <small class="error"></small>
+
+                <label for="robotName">Your Robot's Name:</label>
+                <input type="text" id="robotName" name="robotName" autocomplete="off"
+                    placeholder="e.g., R4-D2, XX-7, C-3PO" required>
+                <small class="error"></small>
+
+                <label for="spaceShipName">Name of Space Ship:</label>
+                <input type="text" id="spaceShipName" name="spaceShipName" autocomplete="off"
+                    placeholder="e.g., Slave I" required>
+                <small class="error"></small>
+
+                <label for="planetName">Name of the Planet:</label>
+                <input type="text" id="planetName" name="planetName" autocomplete="off" placeholder="e.g., Harmony"
+                    required>
+                <small class="error"></small>
+
+                <button type="submit" disabled id="submitButton">Submit</button>
+                <button type="reset">Clear</button>
+            </form>
+        </div>
+    </div>
+    <div id="output"></div>
+</body>
+
+</html>

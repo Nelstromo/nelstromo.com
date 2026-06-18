@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nelson's Cosmic Boutique</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a href="#" class="brand">
+                <span class="brand-name">Nelson's Cosmic Boutique</span>
+            </a>
+            
+            <nav class="main-nav">
+                <div class="cartWrap">
+                    <img src="img/store-icon.png" alt="Shopping Cart" id="shoppingCartImage">
+                    <span id="cartBadge" class="cart-badge hidden">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="gettingStarted" class="container">
+        <div class="page-header">
+            <h2>Design Your Cosmic T-Shirt</h2>
+            <p>Create a unique shirt that's as out of this world as you are</p>
+        </div>
+        <button id="buildShirtBtn" class="btn primary">Start Designing</button>
+    </div>
+
+    <div id="shirtControls" class="hidden container">
+        <div class="page-header">
+            <h2>Build Your Shirt</h2>
+            <div id="instructions" class="shrink-paragraph">
+                <div class="info-msg">
+                    <h3 id="instructionMsg"></h3>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="shirtBoxesContainer">
+            <div id="shirtPreview" class="shirt-preview-card">
+                <div class="makeShirt" id="makeShirt">
+                    <div class="shirtInner" style='cursor: pointer;'>
+                        <div class="leftArmShirt shirtColorChange"></div>
+                        <div class="bodyShirt shirtColorChange">
+                            <div class="topShirt"></div>
+                            <div id="logoPreview"></div>
+                            <div id="textPreview"></div>
+                            <div id="pocketPreview"></div>
+                        </div>
+                        <div class="rightArmShirt shirtColorChange"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editShirt" id="editShirt">
+                <form method="post" class="shirt-form">
+                    <!--Shirt Color-->
+                    <div id="shirtColorMenu" class="color-container">
+                        <div class="msg-container">
+                            <p class="container-title">Color</p>
+                            <p id="color-note" class="menu-notification"></p>
+                        </div>
+
+                        <label for="colorPicker">
+                            <input type="color" id="colorPicker">
+                        </label>
+                    </div>
+
+                    <!--Shirt Size-->
+                    <div id="shirtSizeMenu" class="radio-container">
+                        <div class="msg-container">
+                            <p class="container-title">Shirt Size</p>
+                            <p id="size-note" class="menu-notification"></p>
+                        </div>
+
+                        <label>
+                            <input type="radio" id="sizeSmall" name="shirtSize" value="small">
+                            <span>Small</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="sizeMedium" name="shirtSize" value="medium">
+                            <span>Medium</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="sizeLarge" name="shirtSize" value="large">
+                            <span>Large</span>
+                        </label>
+                    </div>
+
+                    <!--Shirt Logo-->
+                    <div id="shirtLogoMenu"class="input-group">
+                        <div class="msg-container">
+                            <p class="container-title">Logos</p>
+                            <p id="logo-note" class="menu-notification"></p>
+                        </div>
+                        
+
+                        <select name="logos" id="logos">
+                            <option value="" disabled selected>Select a Logo</option>
+                            <option value="none">No Logo</option>
+                            <option value="cat">Cat</option>
+                            <option value="golf">Golf</option>
+                            <option value="book">Book</option>
+                            <option value="coin">Coin</option>
+                        </select>
+                    </div>
+
+                    <!--Shirt Text-->
+                    <div id="shirtTextMenu"class="input-group">
+                        <div class="msg-container">
+                            <p class="container-title">Custom Text</p>
+                            <p id="text-note" class="menu-notification"></p>
+                        </div>
+
+                        <label for="customText"></label>
+                        <input type="text" id="customText" placeholder=" ">
+                        
+                    </div>
+
+                    <!--Shirt Pocket-->
+                    <div id="shirtPocketMenu"class="radio-container">
+                        <div class="msg-container">
+                            <p class="container-title">Pockets</p>
+                            <p id="pocket-note" class="menu-notification"></p>
+                        </div>
+
+                        <label>
+                            <input type="radio" id="noPocket" name="pockets" value="none">
+                            <span>No Pocket</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="leftPocket" name="pockets" value="left">
+                            <span>Left Pocket</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="rightPocket" name="pockets" value="right">
+                            <span>Right Pocket</span>
+                        </label>
+                    </div>
+
+                    <button type="reset" id="startOverBtn" class="btn primary">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="shoppingCartSection hidden container" id="shoppingCartSection"></div>
+
+    <div id="purchaseShirt" class="hidden container"></div>
+</body>
+
+</html>

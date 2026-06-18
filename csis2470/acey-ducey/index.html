@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Acey-Ducey</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <h1>Acey Ducey</h1>
+    <div id="userBank">Bank:</div>
+
+    <div class="cardCarousel">
+        <div class="riverCards">
+            <div id="card1" class="card">?</div>
+            <div id="card2" class="card">?</div>
+        </div>
+        <div id="card3" class="card hidden">?</div>
+    </div>
+
+    <div id="bet-section">
+        <input type="number" id="bet" placeholder="Enter your bet" min="1">
+        <button id="place-bet">Place Bet</button>
+    </div>
+
+    <p id="msg"></p>
+    <button id="play-again" class="hidden">Play Again</button>
+    <button id="reset" class="hidden">Reset Game</button>
+
+    <div id="options">
+        <label><input type="checkbox" id="cheat-mode"> Cheat Mode</label>
+        <br>
+        <a href="#" id="help-link">How To</a> --
+        <a href="#" id="ai-link">AI Credit</a>
+    </div>
+
+    <div id="popup" class="hidden">
+        <div id="popupmsg"></div>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+
+/* ===== Theme hooks (tie these to your site tokens) ===== */
+.pong{
+  --pong-bg: var(--bg, #fff);
+  --pong-panel: var(--bg-glass, #f7f8ff);
+  --pong-ink: var(--text, #111);
+  --pong-accent: var(--accent, #ffb703);
+  --pong-accent-2: var(--accent-2, #ffd166);
+  --pong-border: var(--border, #000);
+  --pong-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,.10));
+  --pong-radius: var(--radius, 16px);
+  --pong-surface: var(--surface, #f3f5ff);
+}
+
+/* ===== Layout ===== */
+.pong { font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: var(--pong-ink); }
+.pong-hud{
+  display:flex; align-items:center; gap:.75rem; max-width: 720px; margin: 1rem auto .5rem;
+}
+.pong-stat{ padding:.35rem .6rem; background: var(--pong-panel); border:1px solid var(--pong-border);
+  border-radius: 999px; box-shadow: var(--pong-shadow); }
+.pong-btn{
+  margin-left:auto; border:1px solid var(--pong-border); border-radius: 999px;
+  padding:.55rem 1rem; font-weight:700; cursor:pointer;
+  background: linear-gradient(90deg, var(--pong-accent), var(--pong-accent-2)); color:#111;
+}
+.pong-btn:active{ transform: translateY(1px); }
+
+.pong-court{
+  position: relative; user-select:none; touch-action: none;
+  max-width: 720px; margin: 0 auto; aspect-ratio: 16 / 9;
+  background: linear-gradient(#fff, var(--pong-surface));
+  border: 2px solid var(--pong-border); border-radius: 24px; box-shadow: var(--pong-shadow);
+  overflow: hidden;
+}
+
+/* Net */
+.pong-net{
+  position:absolute; inset:0; pointer-events:none; opacity:.2;
+  background:
+    linear-gradient(to right, transparent 49.5%, var(--pong-ink) 49.5% 50.5%, transparent 50.5%),
+    repeating-linear-gradient(to bottom, transparent 0 14px, rgba(0,0,0,.08) 14px 15px);
+  mix-blend-mode: multiply;
+}
+
+/* Paddle & ball (DOM so you can skin them) */
+.pong-paddle{
+  position:absolute; bottom: 12px; left: 50%;
+  width: 110px; height: 12px; translate: -50% 0;
+  background: linear-gradient(90deg, var(--pong-accent), var(--pong-accent-2));
+  border: 1px solid var(--pong-border);
+  border-radius: 999px; box-shadow: 0 6px 16px rgba(0,0,0,.15);
+}
+.pong-ball{
+  position:absolute; width: 14px; height: 14px; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff 0%, #ddd 35%, #bbb 100%);
+  border: 1px solid rgba(0,0,0,.25); box-shadow: 0 3px 10px rgba(0,0,0,.18);
+}
+
+/* Overlay */
+.pong-overlay{
+  position:absolute; inset:0; background: rgba(0,0,0,.24);
+  display:grid; place-items:center;
+}
+.pong-card{
+  background: var(--pong-panel); border:1px solid var(--pong-border);
+  padding: 1rem 1.2rem; border-radius: 16px; box-shadow: var(--pong-shadow); text-align:center;
+}
+.pong-hint{ max-width:720px; margin: .5rem auto 1.25rem; text-align:center; opacity:.75; }

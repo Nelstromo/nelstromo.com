@@ -1,0 +1,139 @@
+/* 🌈 Psychedelic Base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Papyrus', monospace;
+    background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc, #ffcc00);
+    background-size: 800% 800%;
+    animation: rainbowTrip 20s ease infinite;
+    color: #ffffff;
+	
+}
+
+/* 🎨 Container gets the shroom glow */
+.container {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 4px double #00ffff;
+    border-radius: 32px;
+    box-shadow: 0 0 20px #ff00cc, 0 0 40px #00ffcc, 0 0 80px #ffcc00;
+    text-align: center;
+    transform: rotate(0.5deg);
+    backdrop-filter: blur(6px);
+}
+
+/* 🌀 Headings */
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #ff00cc, 0 0 20px #00ffff;
+    transform: rotate(-2deg) scale(1.05);
+}
+
+h4 {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #ffccff;
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+/* 🌠 Form Fields */
+.infoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #ffffcc;
+    text-shadow: 0 0 5px #00ffcc;
+}
+
+input[type="text"] {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 3px groove #00ffff;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    backdrop-filter: blur(3px);
+    box-shadow: inset 0 0 10px #00ffff;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff00ff;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+/* 🛸 Submit Button */
+input[type="submit"] {
+    background-color: #ff00cc;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff00cc;
+    transition: all 0.4s ease;
+    animation: pulse 2s infinite;
+}
+
+input[type="submit"]:hover {
+    background-color: #00ffff;
+    color: #000;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+/* ✨ Thank You Message */
+.thanksMSG {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border: 3px dashed #ffcc00;
+    border-radius: 24px;
+    color: #fffbef;
+    font-size: 1.3em;
+    line-height: 1.6;
+    text-shadow: 0 0 5px #00ffff;
+    animation: wiggle 3s infinite alternate ease-in-out;
+}
+
+/* 🌈 Animations */
+@keyframes rainbowTrip {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 10px #ff00cc; }
+    50% { transform: scale(1.1); box-shadow: 0 0 20px #ff00cc; }
+    100% { transform: scale(1); box-shadow: 0 0 10px #ff00cc; }
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(-1deg) scale(1.01); }
+    100% { transform: rotate(1deg) scale(1.03); }
+}
+
+/* 🌪️ Full-page spin */
+body {
+    animation: spinForever 60s linear infinite;
+    transform-origin: center center;
+	
+}
+
+/* Keyframes for continuous spin */
+@keyframes spinForever {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

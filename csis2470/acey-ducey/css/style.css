@@ -1,0 +1,377 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    --ink: #e3e3e3;
+    --gold: #c7a438;
+    --walnut: #4a3424cc;
+    --walnut-deep: #332419;
+    --felt-green: #1f4a33;
+    --felt-shadow: #163525;
+    --bone: #e8dcc7; 
+    --bone-shadow: #d2c0a5;
+    --focus-ring: #e2c15f;
+    --font-body: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    --font-display: 'UnifrakturMaguntia', 'EB Garamond', serif;
+    --edge-shadow: 0 2px 4px rgba(0,0,0,0.35), 0 6px 14px -4px rgba(0,0,0,0.5);
+
+    font-family: var(--font-body);
+    font-optical-sizing: auto;
+    background:  /* for the felt*/
+repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 1px,
+            rgba(0, 0, 0, 0.03) 1px,
+            rgba(0, 0, 0, 0.03) 2px
+        ),
+repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 1px,
+            rgba(0, 0, 0, 0.03) 1px,
+            rgba(0, 0, 0, 0.03) 2px
+        ),
+
+radial-gradient(
+            ellipse at top,
+            hsl(120, 40%, 25%) 0%,
+            hsl(120, 50%, 20%) 30%,
+            hsl(120, 45%, 15%) 70%,
+            hsl(120, 35%, 8%) 100%
+        );
+    color: #f5f5f5;
+    text-align: center;
+    margin: 0;
+    padding: clamp(0.75rem, 3vw, 2rem);
+    min-height: 100svh;
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+    padding-right: max(0.75rem, env(safe-area-inset-right));
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-family: var(--font-display);
+    color: var(--gold);
+    text-shadow: 2px 2px 10px hsl(0, 100%, 50%);
+    margin-block: 0 1rem;
+    text-wrap: balance;
+}
+
+#userBank {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    margin-block-end: 1.5rem;
+    color: hsl(120, 100%, 50%);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+
+.cardCarousel {
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+    margin-block: 1.5rem;
+    container-type: inline-size;
+}
+
+.riverCards {
+    display: flex;
+    gap: clamp(.75rem, 3vw, 1.75rem);
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: .5rem .25rem;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+}
+.riverCards::-webkit-scrollbar { height: 8px; }
+.riverCards::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 4px; }
+.riverCards::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.25); border-radius: 4px; }
+
+.card {
+    inline-size: clamp(60px, 20vw, 90px);
+    block-size: clamp(88px, 26vw, 130px);
+    background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+    border: 3px solid hsl(0, 80%, 40%);
+    border-radius: 0.75rem;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700;
+    font-variant-numeric: lining-nums;
+    color: #000;
+    display: grid;
+    place-content: center;
+    box-shadow: 
+        0 4px 15px hsla(0, 100%, 50%, 0.3),
+        0 2px 8px hsla(0, 0%, 0%, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 20px hsla(0, 100%, 50%, 0.4),
+        0 4px 12px hsla(0, 0%, 0%, 0.3);
+}
+
+
+.hidden { display: none !important; }
+
+#bet-section {
+    margin-block-start: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#bet {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    padding: 0.75rem 1rem;
+    inline-size: min(200px, 80vw);
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 2px solid var(--gold);
+    background: hsl(0, 0%, 5%);
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#bet:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-color: var(--focus-ring);
+    box-shadow: 0 0 0 4px hsla(50, 70%, 60%, 0.2);
+}
+
+button {
+    font-size: clamp(0.85rem, 2.2vw, 1rem);
+    padding: 0.65rem 1.25rem;
+    background: linear-gradient(135deg, var(--gold) 0%, hsl(30, 100%, 50%) 100%);
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    color: hsl(0, 0%, 10%);
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(30, 100%, 50%) 0%, hsl(0, 100%, 50%) 100%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px hsla(30, 100%, 50%, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+button > * {
+    position: relative;
+    z-index: 1;
+}
+
+#msg {
+    font-weight: 600;
+    margin-block-start: 1.5rem;
+    color: hsl(60, 100%, 80%);
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    text-wrap: balance;
+    min-height: 2rem;
+}
+
+#options {
+    margin-block-start: 2rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: hsl(0, 0%, 85%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#options input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-inline-end: 0.5rem;
+    accent-color: var(--gold);
+}
+
+#options input[type="checkbox"]:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+#options a {
+    color: hsl(180, 100%, 60%);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+#options a:hover {
+    border-bottom-color: currentColor;
+}
+
+#options a:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+
+#popup button {
+    background: linear-gradient(135deg, hsl(0, 80%, 50%) 0%, hsl(0, 100%, 40%) 100%);
+    color: white;
+    margin-block-start: 1rem;
+    border: 2px solid hsl(0, 80%, 40%);
+}
+
+#popup button:hover::before {
+    background: linear-gradient(135deg, hsl(0, 100%, 40%) 0%, hsl(0, 80%, 30%) 100%);
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: 
+
+            repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 1px,
+                rgba(0, 0, 0, 0.02) 1px,
+                rgba(0, 0, 0, 0.02) 2px
+            ),
+            repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 1px,
+                rgba(0, 0, 0, 0.02) 1px,
+                rgba(0, 0, 0, 0.02) 2px
+            ),
+
+            radial-gradient(
+                ellipse at top,
+                hsl(120, 35%, 45%) 0%,
+                hsl(120, 40%, 35%) 30%,
+                hsl(120, 45%, 25%) 70%,
+                hsl(120, 50%, 18%) 100%
+            );
+        color: hsl(0, 0%, 95%);
+    }
+}
+
+.cardCarousel { position: relative; }
+
+@keyframes flipIn {
+    0% { transform: rotateY(90deg) scale(0.9); opacity: 0; }
+    60% { opacity: 1; }
+    100% { transform: rotateY(0deg) scale(1); opacity: 1; }
+}
+
+.card.revealed { animation: flipIn 450ms ease; transform-origin: center; }
+
+#options label {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .35rem .75rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: background .25s ease, border-color .25s ease;
+}
+
+#cheat-mode:checked + span,
+#options input[type="checkbox"]:checked + span { color: var(--gold); }
+
+#options input[type="checkbox"]:checked ~ label { background: rgba(199,164,56,0.15); border-color: var(--gold); }
+
+button:disabled { opacity: .45; cursor: not-allowed; filter: grayscale(.4); }
+
+
+#popup::backdrop, .popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+#popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        background-color: hsl(0, 0%, 8%);
+        color: var(--ink);
+        border: 2px solid var(--gold);
+        padding: clamp(1rem, 2.5vw, 1.5rem);
+        inline-size: min(92%, 600px);
+        max-height: min(80svh, 700px);
+        overflow-y: auto;
+        border-radius: 0.75rem;
+        box-shadow:
+                0 0 20px hsla(50, 100%, 50%, 0.3),
+                0 4px 16px hsla(0, 0%, 0%, 0.4);
+        backdrop-filter: blur(10px);
+}
+
+/* Breakpoints */
+@media (max-width: 700px) {
+    h1 { font-size: clamp(1.8rem, 10vw, 2.6rem); }
+    #userBank { font-size: clamp(1rem, 5.5vw, 1.4rem); }
+    .riverCards { justify-content: flex-start; }
+    body { gap: 1.1rem; }
+}
+
+@media (max-width: 520px) {
+    body { padding: clamp(.5rem, 3vw, 1rem); }
+    .card { inline-size: clamp(54px, 24vw, 78px); block-size: clamp(80px, 30vw, 110px); }
+    button { flex: 1 1 45%; }
+    #bet { inline-size: 100%; }
+    #options { gap: .65rem; }
+}
+
+@media (max-width: 400px) {
+    .card { inline-size: clamp(50px, 28vw, 70px); block-size: clamp(72px, 32vw, 100px); }
+    h1 { text-shadow: 1px 1px 6px rgba(0,0,0,.6); }
+    button { padding: .55rem .9rem; }
+}
+
+#popup { position: relative; z-index: 11; }
+#popup:not(.hidden) { animation: fadeIn .4s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0);} }
+.card:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+

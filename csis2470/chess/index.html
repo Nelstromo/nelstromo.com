@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chess</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="everything">
+        <div class="outerBoard" id="outerBoard">
+            <!-- Top Labels (h to a) -->
+            <div class="top-labels">
+                <div></div>
+                <div>a</div>
+                <div>b</div>
+                <div>c</div>
+                <div>d</div>
+                <div>e</div>
+                <div>f</div>
+                <div>g</div>
+                <div>h</div>
+                <div></div>
+            </div>
+
+            <div class="middle-section">
+                <!-- Left Numbers (1 to 8) -->
+                <div class="side-labels left">
+                    <div>8</div>
+                    <div>7</div>
+                    <div>6</div>
+                    <div>5</div>
+                    <div>4</div>
+                    <div>3</div>
+                    <div>2</div>
+                    <div>1</div>
+                </div>
+
+                <!-- 8x8 Board Grid (still labeled a1–h8 for logic consistency) -->
+                <div class="board">
+                    <!-- Row 8 (bottom for Black, top visually) -->
+                    <div id="a8"></div>
+                    <div id="b8"></div>
+                    <div id="c8"></div>
+                    <div id="d8"></div>
+                    <div id="e8"></div>
+                    <div id="f8"></div>
+                    <div id="g8"></div>
+                    <div id="h8"></div>
+
+                    <div id="a7"></div>
+                    <div id="b7"></div>
+                    <div id="c7"></div>
+                    <div id="d7"></div>
+                    <div id="e7"></div>
+                    <div id="f7"></div>
+                    <div id="g7"></div>
+                    <div id="h7"></div>
+
+                    <div id="a6"></div>
+                    <div id="b6"></div>
+                    <div id="c6"></div>
+                    <div id="d6"></div>
+                    <div id="e6"></div>
+                    <div id="f6"></div>
+                    <div id="g6"></div>
+                    <div id="h6"></div>
+
+                    <div id="a5"></div>
+                    <div id="b5"></div>
+                    <div id="c5"></div>
+                    <div id="d5"></div>
+                    <div id="e5"></div>
+                    <div id="f5"></div>
+                    <div id="g5"></div>
+                    <div id="h5"></div>
+
+                    <div id="a4"></div>
+                    <div id="b4"></div>
+                    <div id="c4"></div>
+                    <div id="d4"></div>
+                    <div id="e4"></div>
+                    <div id="f4"></div>
+                    <div id="g4"></div>
+                    <div id="h4"></div>
+
+                    <div id="a3"></div>
+                    <div id="b3"></div>
+                    <div id="c3"></div>
+                    <div id="d3"></div>
+                    <div id="e3"></div>
+                    <div id="f3"></div>
+                    <div id="g3"></div>
+                    <div id="h3"></div>
+
+                    <div id="a2"></div>
+                    <div id="b2"></div>
+                    <div id="c2"></div>
+                    <div id="d2"></div>
+                    <div id="e2"></div>
+                    <div id="f2"></div>
+                    <div id="g2"></div>
+                    <div id="h2"></div>
+
+                    <div id="a1"></div>
+                    <div id="b1"></div>
+                    <div id="c1"></div>
+                    <div id="d1"></div>
+                    <div id="e1"></div>
+                    <div id="f1"></div>
+                    <div id="g1"></div>
+                    <div id="h1"></div>
+                </div>
+
+                <!-- Right Numbers (1 to 8) -->
+                <div class="side-labels right">
+                    <div>8</div>
+                    <div>7</div>
+                    <div>6</div>
+                    <div>5</div>
+                    <div>4</div>
+                    <div>3</div>
+                    <div>2</div>
+                    <div>1</div>
+                </div>
+            </div>
+
+            <!-- Bottom Labels (a to h) -->
+            <div class="bottom-labels">
+                <div></div>
+                <div>a</div>
+                <div>b</div>
+                <div>c</div>
+                <div>d</div>
+                <div>e</div>
+                <div>f</div>
+                <div>g</div>
+                <div>h</div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- Add buttons -->
+        <div class="buttonsBottom">
+            <button id="rotateButton">Flip Board!</button>
+            <button id="changeBoardTheme">Change Board Theme!</button>
+            <button id="setBoardButton">Set Board!</button>
+        </div>
+    </div>
+</body>
+
+</html>

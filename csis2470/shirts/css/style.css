@@ -1,0 +1,962 @@
+/* ==================== CSS Variables ==================== */
+:root {
+    /* Core Colors */
+    --color-primary: #8ab5ff;
+    --color-primary-dark: #65907D;
+    --color-accent: #E07A5F;
+    --color-accent-dark: #B95749;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-error: #e63946;
+    
+    /* Text */
+    --color-text: #141414;
+    --color-text-muted: rgba(20, 20, 20, 0.7);
+    
+    /* Backgrounds */
+    --bg-glass: rgba(255, 253, 250, 0.75);
+    --bg-overlay: rgba(255, 255, 255, 0.4);
+    --bg-overlay-light: rgba(255, 255, 255, 0.8);
+    
+    /* Borders & Shadows */
+    --border-color: rgba(200, 200, 200, 0.3);
+    --shadow-sm: rgba(0, 0, 0, 0.05);
+    --shadow-md: rgba(0, 0, 0, 0.1);
+    
+    /* Gradients */
+    --gradient-orange: radial-gradient(1200px 900px at 15% 25%, #ffd8a8 0%, transparent 60%);
+    --gradient-blue: radial-gradient(1100px 800px at 85% 60%, #b9d4ff 0%, transparent 55%);
+    --gradient-base: linear-gradient(180deg, #fff8ee 0%, #f4f8ff 100%);
+    
+    /* Layout */
+    --border-radius: 20px;
+    --transition: 0.2s ease;
+    --shadow: 0 10px 30px var(--shadow-md);
+    --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ==================== Reset & Base ==================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: transparent;
+    height: 100%;
+}
+
+html::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--gradient-orange), var(--gradient-blue), var(--gradient-base);
+    background-repeat: no-repeat;
+    filter: saturate(135%) contrast(112%) brightness(98%);
+}
+
+body {
+    margin: 0;
+    color: var(--color-text);
+    text-align: center;
+    font-family: var(--font);
+    line-height: 1.6;
+    position: relative;
+    z-index: 0;
+}
+
+/* ==================== Utility Classes ==================== */
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==================== Header / Pill Navbar ==================== */
+.site-header {
+    position: sticky;
+    top: 12px;
+    z-index: 1000;
+    background: transparent;
+    padding: 0 0.75rem;
+}
+
+.nav-wrap {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    backdrop-filter: saturate(180%) blur(10px);
+    background: var(--bg-glass);
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ==================== Buttons ==================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 28px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+    color: var(--color-white);
+    box-shadow: 0 10px 20px rgba(224, 122, 95, 0.3);
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(224, 122, 95, 0.4);
+}
+
+.btn.primary:active {
+    transform: translateY(1px);
+}
+
+#buildShirtBtn,
+#startOverBtn,
+.buildShirtBtn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0.5rem auto;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: var(--bg-glass);
+    backdrop-filter: saturate(180%) blur(10px);
+    padding: 2rem;
+    padding-top: 1.5rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--shadow-sm);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h2 {
+    font-size: 2.25rem;
+    color: var(--color-text);
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+}
+
+.page-header p {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    margin: 0.25rem 0;
+}
+
+.page-header p:first-of-type {
+    margin-top: 0.75rem;
+}
+
+.info-msg {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#instructionMsg {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    padding: 0.75rem 1.5rem;
+    background: rgba(224, 122, 95, 0.1);
+    border-radius: 999px;
+    display: inline-block;
+    transition: all var(--transition);
+    margin: 0;
+}
+
+#shoppingCartImage {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    transition: transform var(--transition-fast);
+}
+
+#shoppingCartImage:hover {
+    transform: scale(1.05);
+}
+
+#shoppingCartImage.drag-over {
+    outline: 3px dashed var(--color-accent);
+    outline-offset: 4px;
+}
+
+#makeShirt.dragging {
+    opacity: 0.7;
+}
+
+.cartWrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cartWrap img {
+    display: block;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    background: var(--color-error);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: transform var(--transition);
+}
+
+.cart-badge.show {
+    transform: scale(1);
+}
+
+.cart-badge.bump {
+    animation: bump 0.3s ease-in-out;
+}
+
+@keyframes bump {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* ==================== Input Groups ==================== */
+.input-group {
+    font-family: var(--font);
+    margin: 1em 0;
+    width: 100%;
+    position: relative;
+    padding: 1.25rem;
+    background: var(--bg-overlay);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px var(--shadow-sm);
+}
+
+.input-group .container-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 1rem 0;
+    text-align: left;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    position: relative;
+}
+
+.input-group input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid var(--border-color);
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    width: 100%;
+    transition: border-color var(--transition);
+    margin: 0;
+}
+
+.input-group label {
+    font-size: 100%;
+    position: absolute;
+    left: 1.25rem;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: var(--color-text-muted);
+    top: auto;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    transform: translateY(-50%) scale(0.9);
+    margin: 0;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: var(--color-white);
+}
+
+.input-group input:focus,
+.input-group input:not(:placeholder-shown) {
+    border-color: var(--color-primary);
+}
+
+.input-group select {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid var(--border-color);
+    background-color: var(--bg-overlay-light);
+    border-radius: var(--border-radius);
+    width: 100%;
+    cursor: pointer;
+    transition: border-color var(--transition);
+    margin: 0;
+}
+
+.input-group select:focus {
+    border-color: var(--color-primary);
+}
+
+.error-message,
+#error,
+#error-size {
+    color: var(--color-error);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* ==================== Shirt Designer ==================== */
+.makeShirt {
+    background: var(--bg-glass-light);
+    backdrop-filter: saturate(180%) blur(10px);
+    width: 400px;
+    height: 550px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.shirtInner {
+    display: flex;
+    align-items: flex-start;
+}
+
+.leftArmShirt,
+.rightArmShirt,
+.bodyShirt {
+    position: static;
+    transition: width 0.35s ease, height 0.35s ease;
+}
+
+.leftArmShirt {
+    background-color: var(--color-white);
+    width: 50px;
+    height: 70px;
+    transform: skewX(-20deg);
+}
+
+.bodyShirt {
+    width: 100px;
+    height: 150px;
+    background-color: var(--color-white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightArmShirt {
+    background-color: var(--color-white);
+    width: 50px;
+    height: 70px;
+    transform: skewX(20deg);
+}
+
+.topShirt {
+    background-color: var(--color-white);
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: width 0.35s ease, height 0.35s ease;
+}
+
+#logoPreview {
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+#logoPreview.logo-pop {
+    animation: logoPop 0.4s ease-out;
+}
+
+@keyframes logoPop {
+    0% {
+        transform: translate(-50%, -50%) scale(1.25);
+        opacity: 1;
+    }
+    10% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0;
+    }
+    60% {
+        transform: translate(-50%, -50%) scale(1.25);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+#textPreview {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 0 3px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.6);
+}
+
+.shirtBoxesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 0;
+}
+
+@media (max-width: 960px) {
+    .shirtBoxesContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+.shirt-preview-card {
+    display: flex;
+    justify-content: center;
+}
+
+#pocketPreview {
+    position: absolute;
+    top: 35%;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-black);
+    opacity: 0.5;
+    border: 1px solid var(--color-black);
+    display: none;
+    z-index: 4;
+}
+
+.pocket-left {
+    top: 45%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-black);
+    opacity: 0.5;
+}
+
+.pocket-right {
+    top: 45%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-black);
+    opacity: 0.5;
+}
+
+/* ==================== Shirt Editor ==================== */
+.editShirt {
+    width: 100%;
+    background: var(--bg-overlay);
+    backdrop-filter: saturate(180%) blur(10px);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 16px var(--shadow-md);
+    border: 1px solid var(--shadow-sm);
+}
+
+.shirt-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.radio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+    padding: 1.25rem;
+    background: var(--bg-overlay);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px var(--shadow-sm);
+}
+
+.msg-container {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.container-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.menu-notification {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    transition: all var(--transition);
+    width: fit-content;
+}
+
+.menu-notification.success {
+    color: #0a742e;
+    background: rgba(10, 116, 46, 0.1);
+}
+
+.menu-notification.error {
+    color: var(--color-error);
+    background: rgba(230, 57, 70, 0.1);
+}
+
+.menu-notification.warning {
+    color: #f5b000;
+    background: rgba(245, 124, 0, 0.1);
+}
+
+.menu-notification.info {
+    color: var(--color-text-muted);
+    background: var(--bg-overlay);
+}
+
+.menu-notification:empty {
+    display: none;
+}
+
+.radio-container label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    background: linear-gradient(to right, var(--color-white), rgba(249,249,255,0.8));
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-weight: 550;
+    color: var(--color-text);
+    transition: all var(--transition);
+    position: relative;
+    user-select: none;
+}
+
+.radio-container label:hover {
+    background: linear-gradient(to right, rgba(249,249,255,0.8), var(--color-white));
+    transform: translateX(2px);
+    border-color: var(--border-color);
+}
+
+.radio-container input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    background: var(--color-white);
+    cursor: pointer;
+    position: relative;
+    transition: all var(--transition);
+    flex-shrink: 0;
+}
+
+.radio-container input[type="radio"]:hover {
+    border-color: var(--color-accent);
+}
+
+.radio-container input[type="radio"]:checked {
+    border-color: var(--color-accent);
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+    box-shadow: 0 0 0 3px rgba(224,122,95,0.15);
+}
+
+.radio-container input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-white);
+}
+
+.radio-container input[type="radio"]:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.radio-container label:has(input:checked) {
+    background: linear-gradient(135deg, rgba(224,122,95,0.15), rgba(224,122,95,0.1));
+    border-color: var(--color-accent);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(224,122,95,0.15);
+}
+
+/* Color Container */
+.color-container {
+    padding: 1.25rem;
+    background: var(--bg-overlay);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px var(--shadow-sm);
+}
+
+.color-container .msg-container {
+    margin-bottom: 1rem;
+}
+
+.color-container label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.color-container input[type="color"] {
+    width: 100%;
+    height: 60px;
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    cursor: pointer;
+    background: var(--color-white);
+    padding: 4px;
+    transition: all var(--transition);
+}
+
+.color-container input[type="color"]:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--shadow-md);
+}
+
+.color-container input[type="color"]:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 4px rgba(224,122,95,0.15);
+}
+
+.color-container input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 12px;
+}
+
+.color-container input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 6px var(--shadow-md);
+}
+
+.color-container input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 6px var(--shadow-md);
+}
+
+/* ==================== Typography & Utilities ==================== */
+input {
+    margin: 10px;
+}
+
+p {
+    font-size: clamp(18px, 4vw, 25px);
+}
+
+h2 {
+    font-size: clamp(24px, 5vw, 35px);
+    margin: 15px;
+}
+
+button {
+    padding: 5px;
+    font-size: clamp(18px, 4vw, 25px);
+    margin: 25px;
+}
+
+/* ==================== Order Form ==================== */
+#orderFormInfo {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 2rem;
+    background: var(--bg-glass);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--shadow-md);
+    box-shadow: var(--shadow);
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#contactForm label {
+    font-weight: 700;
+    margin: 8px 0 4px;
+    color: var(--color-text);
+    text-align: left;
+}
+
+#contactForm input {
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    background: var(--bg-overlay-light);
+    transition: all var(--transition);
+}
+
+#contactForm input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(129,178,154,0.15);
+    background: rgba(255,255,255,0.95);
+}
+
+#contactForm button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(129,178,154,0.3);
+    transition: all var(--transition);
+}
+
+#contactForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(129,178,154,0.4);
+}
+
+#contactForm button:active {
+    transform: translateY(1px);
+}
+
+/* ==================== Cart Table ==================== */
+.cartTable {
+    width: min(900px, 95%);
+    border-collapse: collapse;
+    margin: 20px auto;
+    background: var(--bg-glass);
+    backdrop-filter: saturate(180%) blur(10px);
+    border: 1px solid var(--shadow-md);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.cartTable thead {
+    background: linear-gradient(135deg, rgba(129,178,154,0.9), rgba(129,178,154,0.95));
+    color: var(--color-white);
+}
+
+.cartTable th,
+.cartTable td {
+    border: 1px solid var(--shadow-sm);
+    padding: 14px 16px;
+    text-align: center;
+}
+
+.cartTable th {
+    font-weight: 700;
+    font-size: 1.05em;
+}
+
+.cartTable tbody tr:nth-child(even) {
+    background-color: rgba(250,244,240,0.5);
+}
+
+.cartTable tbody tr:hover {
+    background-color: var(--bg-overlay);
+}
+
+.cartTable tfoot {
+    background: linear-gradient(135deg, rgba(224,122,95,0.9), rgba(185,87,73,0.95));
+    color: var(--color-white);
+}
+
+.cartTable tfoot th {
+    text-align: center;
+    font-size: clamp(18px, 4vw, 25px);
+    font-weight: 700;
+}
+
+/* ==================== Messages & Empty States ==================== */
+.thankYou {
+    max-width: 720px;
+    margin: 30px auto;
+    padding: 2rem;
+    background: var(--bg-glass);
+    backdrop-filter: saturate(180%) blur(10px);
+    color: var(--color-text);
+    border: 1px solid var(--shadow-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.emptyCartMessage {
+    font-size: clamp(20px, 5vw, 30px);
+    padding: 20px;
+    margin: 20px;
+    font-weight: 600;
+}
+
+.emptyCartBtn {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+    color: var(--color-white);
+    width: 180px;
+    height: 50px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(224,122,95,0.3);
+    transition: all var(--transition);
+}
+
+.emptyCartBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(224,122,95,0.4);
+}
+
+.emptyCartBtn:active {
+    transform: translateY(1px);
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    .site-header {
+        top: 8px;
+    }
+    
+    .nav-wrap {
+        padding: 0.5rem 1rem;
+    }
+    
+    .brand-name {
+        font-size: 0.95rem;
+    }
+    
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .makeShirt {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .radio-container {
+        grid-template-columns: 1fr;
+    }
+}

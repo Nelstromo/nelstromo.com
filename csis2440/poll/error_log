@@ -1,0 +1,42 @@
+[13-Jul-2025 23:20:05 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'answer' in 'field list' in /home4/eghbxxte/public_html/csis2440/poll/index.php:204
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/poll/index.php(204): mysqli->query('INSERT INTO pol...')
+#1 /home4/eghbxxte/public_html/csis2440/poll/index.php(29): uploadToDatabase('Chuck Norris', 'BEAVIS AND BUTT...', Object(mysqli), true)
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/poll/index.php on line 204
+[13-Jul-2025 23:23:40 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'timestamp' doesn't have a default value in /home4/eghbxxte/public_html/csis2440/poll/index.php:204
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/poll/index.php(204): mysqli->query('INSERT INTO pol...')
+#1 /home4/eghbxxte/public_html/csis2440/poll/index.php(29): uploadToDatabase('Chuck Norris', 'BEAVIS AND BUTT...', Object(mysqli), true)
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/poll/index.php on line 204
+[13-Jul-2025 23:24:02 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'timestamp' doesn't have a default value in /home4/eghbxxte/public_html/csis2440/poll/index.php:204
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/poll/index.php(204): mysqli->query('INSERT INTO pol...')
+#1 /home4/eghbxxte/public_html/csis2440/poll/index.php(29): uploadToDatabase('Chuck Norris', 'BEAVIS AND BUTT...', Object(mysqli), true)
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/poll/index.php on line 204
+[13-Jul-2025 23:28:14 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'timestamp' doesn't have a default value in /home4/eghbxxte/public_html/csis2440/poll/index.php:204
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/poll/index.php(204): mysqli->query('INSERT INTO pol...')
+#1 /home4/eghbxxte/public_html/csis2440/poll/index.php(29): uploadToDatabase('Chuck Norris', 'BEAVIS AND BUTT...', Object(mysqli), true)
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/poll/index.php on line 204
+[13-Jul-2025 23:33:28 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'id' doesn't have a default value in /home4/eghbxxte/public_html/csis2440/poll/index.php:204
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/poll/index.php(204): mysqli->query('INSERT INTO pol...')
+#1 /home4/eghbxxte/public_html/csis2440/poll/index.php(29): uploadToDatabase('Chuck Norris', 'BEAVIS AND BUTT...', Object(mysqli), true)
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/poll/index.php on line 204
+[13-Jul-2025 23:35:28 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'id' doesn't have a default value in /home4/eghbxxte/public_html/csis2440/poll/index.php:204
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/poll/index.php(204): mysqli->query('INSERT INTO pol...')
+#1 /home4/eghbxxte/public_html/csis2440/poll/index.php(29): uploadToDatabase('Chuck Norris', 'BEAVIS AND BUTT...', Object(mysqli), true)
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/poll/index.php on line 204
+[14-Jul-2025 20:41:31 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '$username' AND password = '$password';', 'CHUCK NORRIS')' at line 1 in /home4/eghbxxte/public_html/csis2440/poll/index.php:204
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/poll/index.php(204): mysqli->query('INSERT INTO pol...')
+#1 /home4/eghbxxte/public_html/csis2440/poll/index.php(29): uploadToDatabase('SELECT * FROM u...', 'CHUCK NORRIS', Object(mysqli), false)
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/poll/index.php on line 204

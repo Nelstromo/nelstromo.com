@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+/* ==============================================================================
+   General Base Styling & Font
+================================================================================== */
+body {
+    margin: 0;
+    background-color: #0d0d0d;
+    font-family: 'Orbitron', sans-serif; /* Techy font */
+}
+
+h1, h4, p {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff99;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* =============================
+   Link Hover Effect 
+============================= */
+a {
+    color: #00ffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 4px #00ffffaa;
+}
+
+/* =============================
+   General Form Elements
+============================= */
+label {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff99;
+}
+input, select, button {
+    background-color: #000;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    padding: 0.6rem;
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #00ffff55;
+}
+
+input[type="submit"], button {
+    background-color: #00ffff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* =============================
+   General Form Elements
+============================= */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #111111;
+    padding: 2rem;
+    padding-top: 1rem;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff88;
+    border-radius: 10px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+.page-header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0 0 5px #00ffffaa;
+}   
+.page-header p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0 0 5px #00ffffaa;
+}
+
+/* ==============================================================================
+   Navigation Bar
+================================================================================== */
+.nav-bar 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #111, #1a1a1a);
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+    border-bottom: 2px solid #00ffff;
+    position: relative;
+}
+
+/* Title - center*/
+.nav-title 
+{
+    order: 2;      
+    flex-grow: 0;
+    text-align: center;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.nav-title h1 
+{
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0 0 5px #00ffffaa;
+}
+
+/* Profile image - right */
+.nav-profile-Img {
+    order: 3;
+    text-align: right;
+    width: 75px;
+    height: 75px;
+
+}
+/*.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff66;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff66;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    box-shadow: 0 0 20px #00ffffaa, 0 0 30px #00ffff55;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+    */
+.profile-pic-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff66;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Animated border ring */
+.profile-pic-wrapper::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top: 2px solid #00ffff;
+    border-right: 2px solid #00ffff;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Hover trigger */
+.profile-pic-wrapper:hover::after {
+    opacity: 1;
+    animation: spinRing 1.2s linear infinite;
+}
+
+.profile-pic-wrapper:hover .profile-pic {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/* Spin animation */
+@keyframes spinRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+
+/* Links - left */
+.nav-links {
+    order: 1;
+    flex-grow: 1;
+    text-align: left;
+}
+.nav-links a {
+    color: #00ffff;
+    text-decoration: none;
+    margin: 0 16px;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #00ffff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.nav-links a:hover {
+    color: #ffffff;
+}
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 16px; /* Space between links */
+}
+/* Override grantedScreen for navbar use */
+.nav-title .grantedScreen {
+    border: none;
+    padding: 4px 8px;
+    background-color: #004400;
+    box-shadow: 0 0 8px #00ff00aa;
+    margin-top: 6px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.nav-title .access-granted {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #00ff00;
+    text-shadow: 0 0 3px #00ff00aa;
+}
+
+/* ==============================================================================
+   Login Page (index.php)
+================================================================================== */
+
+/* =============================
+   Log In Form Elements
+============================= */
+form.login-form 
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #222222;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 15px #00ffff55;
+    border-radius: 8px;
+}
+.login-form label {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff99;
+}
+.login-form input, select, button {
+    background-color: #000;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    padding: 0.6rem;
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #00ffff55;
+}
+
+.login-form input[type="submit"], button {
+    background-color: #00ffff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.login-form input[type="submit"]:hover, button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* =============================
+   Reset Button
+============================= */
+.resetBtn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #ff0033;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #ff0033cc;
+    transition: background-color 0.2s ease;
+}
+
+.resetBtn:hover {
+    background-color: #990022;
+}
+/* =============================
+   File Selection
+============================= */
+.fileSelection {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #111111;
+    padding: 2rem;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff88;
+    border-radius: 10px;
+}
+
+/* =============================
+   File Info Table (Data Display)
+============================= */
+.infoTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    box-shadow: 0 0 15px #00ffff55;
+}
+
+.infoTable th {
+    border: 1px solid #00ffff;
+    padding: 0.75rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #111;
+}
+
+.infoTable td {
+    border: 1px solid #00ffff;
+    padding: 0.75rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #111;
+    word-wrap: break-word; 
+    white-space: normal;
+    max-width: 300px;  
+}
+
+.infoTable th {
+    background-color: #003333;
+    color: #00ffff;
+    text-shadow: 0 0 4px #00ffffaa;
+}
+
+.infoTable tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+/* =============================
+   Denied Message Alert
+============================= */
+.deniedMSG {
+    border: 2px solid #ff0000;
+    padding: 1rem;
+    background-color: #1a0000;
+    box-shadow: 0 0 15px #ff0000aa;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+.denied-msg-alert {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 0 5px #ff0000aa;
+}
+.denied-msg-alert strong {
+    color: #ff0000;
+}
+.deniedMSG .denied-msg {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 3px #ff0000aa;
+}
+
+/* ==============================================================================
+   Video Page
+================================================================================== */
+.video-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #111111;
+    padding: 2rem;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff88;
+    border-radius: 10px;
+}
+.video-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.video-header-msg1 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0 0 5px #00ffffaa;
+}
+.video-container iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00ffff55;
+}
+
+/* ==============================================================================
+   Account Page
+================================================================================== */
+.account-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #111111;
+    
+}
+.account-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.account-header-msg1 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0 0 5px #00ffffaa;
+}
+.profile-pic-full {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff66;
+    display: block;
+    margin: 0 auto 1rem;
+}
+.account-info {
+    text-align: center;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff99;
+}
+.account-info-header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ==============================================================================
+   Create Account Page
+================================================================================== */
+form.create-account-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #111111;
+    padding: 2rem;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff88;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.create-account-form label {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff99;
+}
+.create-account-form input, select, button {
+    background-color: #000;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    padding: 0.6rem;
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #00ffff55;
+}
+
+.create-account-form input[type="submit"], button {
+    background-color: #00ffff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.create-account-form input[type="submit"]:hover, button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.account-created {
+    border: none;
+    padding: 4px 8px;
+    background-color: #004400;
+    box-shadow: 0 0 8px #00ff00aa;
+    margin-top: 6px;
+    border-radius: 4px;
+    display: block;
+    margin: 6px auto;
+    max-width: 400px;
+    text-align: center; 
+}
+
+.account-created-title {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #00ff00;
+    text-shadow: 0 0 3px #00ff00aa;
+}
+
+
+.profile-pic-half {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00aa;
+    display: block;
+    margin: 0 auto 1rem;
+}

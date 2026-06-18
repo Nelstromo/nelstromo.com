@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=UnifrakturMaguntia&display=swap');
+
+
+:root {
+    --ink: #e3e3e3;
+    --gold: #c7a438;
+    --walnut: #4a3424cc;
+    --walnut-deep: #332419;
+    --felt-green: #1f4a33;
+    --felt-shadow: #163525;
+    --bone: #e8dcc7; 
+    --bone-shadow: #d2c0a5;
+    --focus-ring: #e2c15f;
+    --font-body: 'EB Garamond', Garamond, 'Times New Roman', serif;
+    --font-display: 'UnifrakturMaguntia', 'EB Garamond', serif;
+    --edge-shadow: 0 2px 4px rgba(0,0,0,0.35), 0 6px 14px -4px rgba(0,0,0,0.5);
+    --bg-image: url('../img/spain1519.jpg');
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    z-index: -2;
+    background: var(--bg-image) center center / cover no-repeat;
+
+}
+
+body {
+    font-family: var(--font-body);
+    text-align: center;
+    margin: 1rem; 
+    color: var(--ink);
+    background: linear-gradient(135deg, rgba(243,229,196,0.94), rgba(225,200,148,0.9));
+    position: relative;
+    line-height: 1.4;
+}
+
+button {
+    background: var(--carmine);
+    color: #f9f4ec;
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    border: 2px solid var(--gold);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 180ms ease;
+}
+
+button:active:not(:disabled) { background: #741a13; }
+
+button:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 1rem 1.25rem;
+    background: var(--felt-green);
+    border: 2px solid #152a1d;
+    border-radius: 14px;
+}
+
+div[id^="dice"] {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--bone), var(--bone-shadow));
+    border: 2px solid #b89d73;
+    border-radius: 14px;
+    position: relative;
+    box-shadow: var(--edge-shadow);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Subtle marbling on Dice to give extra nice touch */
+div[id^="dice"]::before, div[id^="dice"]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+div[id^="dice"]::before {
+    background: repeating-radial-gradient(circle at 30% 40%, rgba(0,0,0,0.04) 0 4px, transparent 4px 12px),
+                repeating-linear-gradient(25deg, rgba(0,0,0,0.035) 0 6px, transparent 6px 18px);
+    mix-blend-mode: multiply;
+    opacity: 0.55;
+}
+div[id^="dice"]::after {
+    background: radial-gradient(circle at 70% 25%, rgba(255,255,255,0.6), rgba(255,255,255,0) 60%),
+                linear-gradient(160deg, rgba(0,0,0,0.15), transparent 60%);
+    opacity: 0.55;
+}
+
+.zero {
+    display: none;
+}
+
+.die-dot {
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle at 30% 30%, #000, #1a1a1a 60%, #2d2d2d 100%);
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.8), inset 0 0 2px rgba(255,255,255,0.2);
+}
+
+/* Pip absolute positions */
+.dot1 {
+    top: 40px;
+    left: 40px;
+}
+
+.dot2 {
+    top: 20px;
+    left: 20px;
+}
+
+.dot3 {
+    top: 20px;
+    left: 60px;
+}
+
+.dot4 {
+    top: 60px;
+    left: 20px;
+}
+
+.dot5 {
+    top: 60px;
+    left: 60px;
+}
+
+.dot6 {
+    top: 40px;
+    left: 20px;
+}
+
+.dot7 {
+    top: 40px;
+    left: 60px;
+}
+
+/* Dice Layouts by face*/
+.one::before {
+    content: '';
+    display: block;
+    position: relative;
+}
+
+.one .die-dot {
+    top: 40px;
+    left: 40px;
+}
+
+.two .die-dot:nth-child(1) {
+    top: 20px;
+    left: 20px;
+}
+
+.two .die-dot:nth-child(2) {
+    top: 60px;
+    left: 60px;
+}
+
+.three .die-dot:nth-child(1) {
+    top: 20px;
+    left: 20px;
+}
+
+.three .die-dot:nth-child(2) {
+    top: 40px;
+    left: 40px;
+}
+
+.three .die-dot:nth-child(3) {
+    top: 60px;
+    left: 60px;
+}
+
+.four .die-dot:nth-child(1) {
+    top: 20px;
+    left: 20px;
+}
+
+.four .die-dot:nth-child(2) {
+    top: 20px;
+    left: 60px;
+}
+
+.four .die-dot:nth-child(3) {
+    top: 60px;
+    left: 20px;
+}
+
+.four .die-dot:nth-child(4) {
+    top: 60px;
+    left: 60px;
+}
+
+.five .die-dot:nth-child(1) {
+    top: 20px;
+    left: 20px;
+}
+
+.five .die-dot:nth-child(2) {
+    top: 20px;
+    left: 60px;
+}
+
+.five .die-dot:nth-child(3) {
+    top: 40px;
+    left: 40px;
+}
+
+.five .die-dot:nth-child(4) {
+    top: 60px;
+    left: 20px;
+}
+
+.five .die-dot:nth-child(5) {
+    top: 60px;
+    left: 60px;
+}
+
+.six .die-dot:nth-child(1) {
+    top: 20px;
+    left: 20px;
+}
+
+.six .die-dot:nth-child(2) {
+    top: 20px;
+    left: 60px;
+}
+
+.six .die-dot:nth-child(3) {
+    top: 40px;
+    left: 20px;
+}
+
+.six .die-dot:nth-child(4) {
+    top: 40px;
+    left: 60px;
+}
+
+.six .die-dot:nth-child(5) {
+    top: 60px;
+    left: 20px;
+}
+
+.six .die-dot:nth-child(6) {
+    top: 60px;
+    left: 60px;
+}
+
+/* ===Container =========================================== */
+.container {
+    background: var(--walnut);
+    padding: 1.25rem 1.5rem 1.75rem;
+    border: 4px solid #2d1d14;
+    border-radius: 18px;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    color: var(--parchment-base);
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 3.1rem);
+    color: var(--gold);
+    margin: 0 0 0.75rem;
+}
+
+p {
+    color: var(--ink);
+    font-size: 1.5rem;
+    max-width: 60ch;
+    margin: 0.5rem auto 1.25rem;
+}
+
+
+#gif {
+    position: fixed;
+    bottom: 20px;
+    left: -200px;
+    width: 300px;
+    height: auto;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+}
+
+@keyframes slideAcross {
+    0% {
+        left: -200px;
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 110%;
+
+        opacity: 0;
+    }
+}
+
+.animate-slide {
+    animation: slideAcross 5s linear forwards;
+}

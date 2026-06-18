@@ -1,0 +1,586 @@
+/* ============= Theme tokens ============= */
+/* Make page backgrounds transparent so the viewport layer is visible */
+html, body { background: transparent; }
+
+/* Viewport-fixed gradient (sits behind everything) */
+html::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  /* slightly darker mixes + bigger blooms + slower fade */
+  background:
+    radial-gradient(140vmax 110vmax at 14% 22%,
+      /* warm bloom: mix, then shade with a little black */
+      color-mix(in oklab, color-mix(in oklab, var(--o1) 88%, var(--o2)), black 6%) 0%,
+      color-mix(in oklab, color-mix(in oklab, var(--o1) 88%, var(--o2)), black 6%) 50%,
+      transparent 78%),
+    radial-gradient(130vmax 100vmax at 86% 58%,
+      /* blue bloom */
+      color-mix(in oklab, color-mix(in oklab, var(--b1) 88%, var(--b2)), black 6%) 0%,
+      color-mix(in oklab, color-mix(in oklab, var(--b1) 88%, var(--b2)), black 6%) 45%,
+      transparent 72%),
+    /* base wash, nudged a hair darker */
+    linear-gradient(180deg,
+      color-mix(in oklab, var(--top), black 3%) 0%,
+      color-mix(in oklab, var(--bot), black 6%) 100%);
+
+  background-repeat: no-repeat;
+  background-blend-mode: normal, normal, multiply; 
+  filter: saturate(135%) contrast(112%) brightness(98%); 
+}
+
+/* Fallback if color-mix isn't supported */
+@supports not (color-mix(in oklab, white, black)) {
+  html::before{
+    background:
+      radial-gradient(1200px 900px at 15% 25%, #ffd8a8 0%, transparent 60%),
+      radial-gradient(1100px 800px at 85% 60%, #b9d4ff 0%, transparent 55%),
+      linear-gradient(180deg, #fff8ee 0%, #f4f8ff 100%);
+  }
+}
+
+/* ============= Theme tokens ============= */
+:root
+{
+    --bg: #ffffff8e;
+    --bg-glass: rgba(255, 253, 250, 0.349);
+    --bg-hide: #00000000; /* transparent for hidden elements */
+    --text: #141414;
+    --text2: #ffffff;
+    --formbuttonbg: linear-gradient(135deg, #ffd166 0%, #ffb703 100%);
+    --formbuttonboxshadow: 0 10px 50px -6px rgba(238, 153, 97, 0.5);
+    --muted: #6b7280;
+    --border: #000000;
+    --accent: #ffb703;   /* soft orange */
+    --accent-2: #ffd166; /* warm yellow */
+    --shadow: 0 10px 30px rgba(0,0,0,.10);
+    --textshadow: 0 1px 2px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.1);
+    --radius: 9999px;    /* <-- pill */
+    --panel-radius: 20px;
+    --container: 1100px; /* slightly narrower looks nicer as a pill */
+    --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    --text-subtle: rgb(110,110,110);
+    --surface: #f9f9ff;
+    --border-focus: rgb(150,150,200);
+    --chip-bg: #ffffff;
+  /* adjustable extra horizontal space for auto-width buttons */
+  --button-extra-x: 50px;
+  /* ============= Background Color Scheme ============= */
+    --o1: #ffd8a8;   /* light orange */
+  --o2: #ffb86b;   /* warm orange */
+  --b1: #b9d4ff;   /* pale blue */
+  --b2: #8ab5ff;   /* soft blue */
+  --top: #fff8ee;  /* creamy top wash */
+  --bot: #f4f8ff;  /* cool bottom wash */
+}
+
+/* ============= Dark Mode ============= */
+
+
+/* ===============================
+    Navbar
+================================= */
+/* ============= Header / Pill Navbar ============= */
+.site-header{
+  position: sticky; top: 12px; z-index: 1000;
+  background: transparent; /* let the pill stand out */
+  padding: 0 .75rem;       /* breathing room at edges on small screens */
+}
+
+/* The pill */
+.nav-wrap{
+  position: relative;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: .5rem .75rem; /* tighter vertical, airy horizontal */
+  display: flex; align-items: center; gap: 1rem;
+  backdrop-filter: saturate(180%) blur(10px);
+  background: var(--bg-glass);
+  /*border: 1px solid var(--border);*/
+  border-radius: var(--radius);        /* <-- pill corners */
+  box-shadow: var(--shadow);
+}
+
+/* Brand */
+.brand{
+  display: inline-flex; align-items: center; gap: .6rem;
+  text-decoration: none; color: var(--text);
+}
+.brand-mark{
+  display: grid; place-items: center;
+  width: 28px; height: 28px; border-radius: 8px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #111; font-weight: 800; font-size: 16px; box-shadow: 0 6px 16px rgba(0,0,0,.12);
+}
+.brand-name{ font-weight: 700; letter-spacing: .2px; }
+
+/* Desktop nav contents live inside the pill */
+.main-nav{
+  margin-left: auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.links{
+  display: flex; align-items: center; gap: 1rem;
+  list-style: none; margin: 0; padding: 0;
+}
+.links a{
+  display: inline-block; padding: .5rem .6rem; border-radius: .8rem;
+  text-decoration: none; color: var(--text); font-weight: 550;
+}
+.links a:hover{ background: #f7f7f7; }
+
+.actions{ display: flex; align-items: center; gap: .6rem; }
+.lang-pill{
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 36px; height: 36px; padding: 0 .6rem; border-radius: 999px;
+  background: #f5f5f5; color: #222; text-decoration: none; font-weight: 600;
+  border: 1px solid var(--border);
+}
+.lang-pill:hover{ background: #f0f0f0; }
+
+.btn{
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 40px; padding: 0 14px; border-radius: 16px; font-weight: 700;
+  text-decoration: none; border: 1px solid transparent; transition: transform .06s ease;
+}
+.btn:active{ transform: translateY(1px); }
+.btn.primary{
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #111;
+}
+
+/* Burger (CSS-only) */
+.nav-toggle{ position: absolute; opacity: 0; pointer-events: none; }
+.nav-burger{
+  display: none;
+  width: 40px; height: 40px;
+  border: 1px solid var(--border); border-radius: 12px;
+  background: transparent; cursor: pointer;
+  align-items: center; justify-content: center;
+}
+.nav-burger .bar{
+  display: block; width: 20px; height: 2px; margin: 3px 0;
+  background: var(--text); border-radius: 2px;
+}
+
+/* ============= Responsive ============= */
+@media (max-width: 960px){
+  .nav-burger{ display: inline-flex; margin-left: auto; }
+  /* Mobile panel drops *below* the pill, with soft rounded corners */
+  .main-nav{
+    position: absolute;
+    left: 0; right: 0; top: calc(100% + 10px);
+    display: grid; grid-template-columns: 1fr; gap: .75rem;
+    padding: 1rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--panel-radius);
+    box-shadow: var(--shadow);
+    transform: translateY(-12px); opacity: 0; pointer-events: none;
+    transition: transform .18s ease, opacity .18s ease;
+  }
+  /* Reveal when checked */
+  #nav-toggle:checked ~ .main-nav{
+    transform: translateY(0); opacity: 1; pointer-events: auto;
+  }
+  .links{ flex-direction: column; align-items: flex-start; }
+  .links a{ width: 100%; padding: .8rem; border-radius: .8rem; }
+  .actions{ justify-content: flex-start; }
+}
+
+/* Focus styles for a11y */
+a:focus, .nav-burger:focus{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important; }
+}
+
+
+
+/* ===============================
+   Global Styles
+================================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Replace your existing .container with this */
+.container{
+  width: min(92vw, 1400px);   /* fills most of the viewport, capped on ultrawides */
+  margin: 2rem auto;          /* keeps equal side gutters */
+  padding: clamp(1rem, 2vw, 2rem);
+  background: var(--bg-glass);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: saturate(160%) blur(8px);
+}
+
+/* Optional: a wider variant you can apply when needed */
+.container--wide{
+  width: min(96vw, 1600px);
+}
+
+/* Optional: full-bleed sections (ignore container gutters for hero banners, etc.) */
+.full-bleed{
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* ===============================
+   Form Styling
+================================= */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+input[type="file"] {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fafafa;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background: #005fa3;
+}
+
+/* ===============================
+   Results Section
+================================= */
+.results {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f9fafc;
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+}
+
+.results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.results li:last-child {
+    border-bottom: none;
+}
+
+/* ===============================
+   Error Messages
+================================= */
+.deniedMSG {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 6px;
+    background: #ffe6e6;
+    border: 1px solid #ff9999;
+    color: #a60000;
+}
+
+.denied-msg-alert {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.error-msg {
+    margin: 0;
+    font-size: 0.95rem;
+}
+/* ===============================
+   Container (wider + glassy)
+================================= */
+.container{
+  
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--bg-glass);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: saturate(160%) blur(8px);
+}
+
+/* ===============================
+   Results layout (3 columns)
+   [Sidebar] [Bill Details] [LIM (Line/Measure)]
+================================= */
+.bill-object-validation-container{
+  display: grid;
+  grid-template-columns: 260px 1fr 1.2fr;
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+/* Card-y panels */
+.uploaded-controlnumbers-navigation,
+.bill-object-details,
+.LIM-details{
+  background: var(--chip-bg);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+/* Sidebar list scroll if long */
+.uploaded-controlnumbers-navigation{
+  max-height: 70vh;
+  overflow: auto;
+}
+
+/* Bill details: content + flags stack */
+.bill-object-details{
+  display: grid;
+  gap: .75rem;
+}
+
+/* LIM stack: Line Items above Measures */
+.LIM-details{
+  display: grid;
+  gap: 1rem;
+}
+
+/* ===============================
+   Scroll panes for Line/Measure
+   - vertical scroll window
+   - horizontal side-scroll for wide tables
+   - sticky table headers
+================================= */
+#LineItemDetails,
+#MeasureDetails{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 12px;
+  padding: .75rem;
+  max-height: 45vh;          /* vertical window */
+  overflow: auto;            /* enables vertical scroll */
+}
+
+#LineItemDetails table,
+#MeasureDetails table{
+  width: max-content;        /* allow horizontal growth */
+  min-width: 100%;           /* but never smaller than pane */
+  border-collapse: collapse;
+}
+
+/* Sticky headers inside the scroll panes */
+#LineItemDetails thead th,
+#MeasureDetails thead th{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: color-mix(in oklab, var(--top), white 4%);
+  box-shadow: inset 0 -1px rgba(0,0,0,.08), 0 1px 0 rgba(0,0,0,.06);
+}
+
+/* Subtle section labels */
+#LineItemDetails > span,
+#MeasureDetails > span{
+  display: inline-block;
+  font-weight: 700;
+  color: var(--text);
+  margin: .25rem 0 .5rem;
+}
+
+/* ===============================
+   Table styling (readable + compact)
+================================= */
+.results table{
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: .95rem;
+}
+
+.results th,
+.results td{
+  padding: .55rem .7rem;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  border-right: 1px solid rgba(0,0,0,.04);
+  text-align: left;
+  white-space: nowrap;       /* keep cells tidy; rely on side-scroll */
+}
+
+.results th:last-child,
+.results td:last-child{ border-right: 0; }
+
+.results tbody tr:nth-child(even){
+  background: #fafbff;
+}
+
+.results tbody tr:hover{
+  background: #f4f7ff;
+}
+
+/* Make long text wrap only if you want:
+.results td{ white-space: normal; word-break: break-word; }
+*/
+
+/* ===============================
+   JSON preview block
+================================= */
+.json-preview{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: .75rem;
+  max-height: 40vh;
+  overflow: auto;
+}
+
+.json-preview pre{
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
+/* ===============================
+   Uploaded files message
+================================= */
+.uploaded-files-msg{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: .75rem 1rem;
+}
+
+/* ===============================
+   Error toast consistency
+================================= */
+.deniedMSG{
+  max-width: var(--container);
+  background: #ffe6e6;
+  border: 1px solid #ffb3b3;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* ===============================
+   Responsive
+================================= */
+@media (max-width: 1200px){
+  .bill-object-validation-container{
+    grid-template-columns: 220px 1fr 1fr;
+  }
+}
+
+@media (max-width: 960px){
+  .bill-object-validation-container{
+    grid-template-columns: 1fr;
+  }
+  .uploaded-controlnumbers-navigation,
+  .bill-object-details,
+  .LIM-details{
+    max-height: none;
+  }
+  #LineItemDetails,
+  #MeasureDetails{
+    max-height: 50vh;
+  }
+}
+
+/* ================================
+Cards
+================================= */
+.card { background: var(--bg, #fff); border: 1px solid rgba(0,0,0,.08); border-radius: 10px; padding: 1rem; margin-bottom: 1rem; }
+.card h4, .card h5 { margin: 0 0 .5rem; }
+.kv { display: grid; grid-template-columns: 180px 1fr; gap: .25rem .75rem; margin: 0; }
+.kv dt { font-weight: 600; color: #444; }
+.kv dd { margin: 0; color: #222; overflow-wrap: anywhere; }
+.account-invoices { margin-top: .75rem; display: grid; gap: .75rem; }
+.stack { display: grid; gap: .75rem; }
+.card.charge-group        { border-left: 3px solid rgba(0,0,0,.15); }
+.card.lineitem-header     { border-left: 3px solid rgba(0,0,0,.12); }
+.card.lineitem-subheader  { border-left: 3px solid rgba(0,0,0,.10); }
+.card.lineitem-charge,
+.card.lineitem-charge1,
+.card.lineitem-charge2    { border-left: 3px solid rgba(0,0,0,.08); }
+.card h6 { margin: 0 0 .5rem; font-size: 1rem; }
+.table-wrap { margin-top: .5rem; overflow-x: auto; }
+.table-caption { font-weight: 600; margin: .25rem 0 .5rem; }
+.items-table { width: 100%; border-collapse: collapse; }
+.items-table th, .items-table td { padding: .5rem .75rem; border-bottom: 1px solid rgba(0,0,0,.08); vertical-align: middle; }
+.items-table th { text-align: left; font-weight: 600; }
+/* Base table */
+.items-table {
+  width: 100%;
+  border-collapse: collapse; /* keep collapsed borders */
+}
+
+/* Remove old cell borders if you had them */
+.items-table th,
+.items-table td {
+  padding: .5rem .75rem;
+  border: 0;
+  vertical-align: middle;
+}
+
+/* Header separator (slightly stronger) */
+.items-table thead th {
+  border-bottom: 1px solid rgba(0,0,0,.10);
+}
+
+/* Faint line above and below each body row */
+.items-table tbody tr {
+  border-top: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.items-table tbody tr:hover {
+  background: #f4f7ff;
+}
+
+
+.controls { white-space: nowrap; }
+.matched-input { width: 8rem; }
+.sr-only { position: absolute; left: -9999px; top: -9999px; }
+

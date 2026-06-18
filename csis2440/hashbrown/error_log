@@ -1,0 +1,68 @@
+[27-Jul-2025 05:30:42 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'lastLoginDate' doesn't have a default value in /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php:244
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php(244): mysqli_query(Object(mysqli), 'INSERT INTO sec...')
+#1 /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php(76): addUserToDatabase('eagle1', '5c35199ad128a84...', Object(mysqli))
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php on line 244
+[27-Jul-2025 08:11:07 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/eghbxxte/public_html/csis2440/hashbrown/index.php:217) in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php on line 296
+[27-Jul-2025 08:11:22 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/eghbxxte/public_html/csis2440/hashbrown/index.php:217) in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php on line 296
+[29-Jul-2025 21:16:21 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'isAdmin' in 'field list' in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php:261
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(261): mysqli_query(Object(mysqli), 'SELECT isAdmin ...')
+#1 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(185): isAdmin('eagle1', Object(mysqli))
+#2 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(66): checkCredentials('eagle1', 'e3815ef48855214...', Object(mysqli))
+#3 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php on line 261
+[29-Jul-2025 21:16:36 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'isAdmin' in 'field list' in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php:261
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(261): mysqli_query(Object(mysqli), 'SELECT isAdmin ...')
+#1 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(185): isAdmin('eagle1', Object(mysqli))
+#2 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(66): checkCredentials('eagle1', 'e3815ef48855214...', Object(mysqli))
+#3 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php on line 261
+[29-Jul-2025 21:31:36 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'isAdmin' doesn't have a default value in /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php:209
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php(209): mysqli_query(Object(mysqli), 'INSERT INTO sec...')
+#1 /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php(73): addUserToDatabase('Yale', '2f733146043ee7d...', Object(mysqli))
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php on line 209
+[29-Jul-2025 21:34:17 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'isAdmin' doesn't have a default value in /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php:209
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php(209): mysqli_query(Object(mysqli), 'INSERT INTO sec...')
+#1 /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php(73): addUserToDatabase('Yale', '2f733146043ee7d...', Object(mysqli))
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php on line 209
+[29-Jul-2025 21:35:17 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'isAdmin' doesn't have a default value in /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php:209
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php(209): mysqli_query(Object(mysqli), 'INSERT INTO sec...')
+#1 /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php(73): addUserToDatabase('yale', 'b52c4f713d9b6d1...', Object(mysqli))
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php on line 209
+[30-Jul-2025 16:51:22 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'admin'--' AND password = 'password''' at line 1 in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php:240
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(240): mysqli_query(Object(mysqli), 'SELECT locked F...')
+#1 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(174): isAccountLocked('SELECT * FROM m...', Object(mysqli))
+#2 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(67): checkCredentials('SELECT * FROM m...', 'bb2fcc8babdc2b2...', Object(mysqli))
+#3 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php on line 240
+[30-Jul-2025 16:51:29 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'admin'--' AND password = 'password''' at line 1 in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php:240
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(240): mysqli_query(Object(mysqli), 'SELECT locked F...')
+#1 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(174): isAccountLocked('SELECT * FROM m...', Object(mysqli))
+#2 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(67): checkCredentials('SELECT * FROM m...', 'bb2fcc8babdc2b2...', Object(mysqli))
+#3 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php on line 240
+[30-Jul-2025 16:55:01 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'admin'--' AND password = 'password''' at line 1 in /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php:263
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php(263): mysqli_query(Object(mysqli), 'SELECT * FROM s...')
+#1 /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php(68): duplicateUserCheck('SELECT * FROM m...', Object(mysqli), '')
+#2 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/hashbrown/create-account.php on line 263
+[30-Jul-2025 16:58:27 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''''' at line 1 in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php:240
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(240): mysqli_query(Object(mysqli), 'SELECT locked F...')
+#1 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(174): isAccountLocked(''', Object(mysqli))
+#2 /home4/eghbxxte/public_html/csis2440/hashbrown/index.php(67): checkCredentials(''', '39e3dd7f64d9c8c...', Object(mysqli))
+#3 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/hashbrown/index.php on line 240
+[30-Jul-2025 23:12:26 America/Chicago] PHP Warning:  Undefined array key "access" in /home4/eghbxxte/public_html/csis2440/hashbrown/account.php on line 3

@@ -1,0 +1,32 @@
+[17-Jun-2025 22:44:02 America/Chicago] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home4/eghbxxte/public_html/csis2440/input/index.php on line 50
+[17-Jun-2025 22:44:05 America/Chicago] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home4/eghbxxte/public_html/csis2440/input/index.php on line 50
+[17-Jun-2025 22:44:06 America/Chicago] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home4/eghbxxte/public_html/csis2440/input/index.php on line 50
+[17-Jun-2025 22:44:07 America/Chicago] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home4/eghbxxte/public_html/csis2440/input/index.php on line 50
+[17-Jun-2025 22:44:08 America/Chicago] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home4/eghbxxte/public_html/csis2440/input/index.php on line 50
+[17-Jun-2025 22:44:09 America/Chicago] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home4/eghbxxte/public_html/csis2440/input/index.php on line 50
+[17-Jun-2025 22:44:09 America/Chicago] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home4/eghbxxte/public_html/csis2440/input/index.php on line 50
+[17-Jun-2025 22:45:53 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'eghbxxte_rootNelstromo'@'localhost' to database 'contact_form' in /home4/eghbxxte/public_html/csis2440/input/index.php:8
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/input/index.php(8): mysqli->__construct('localhost', 'eghbxxte_rootNe...', Object(SensitiveParameterValue), 'contact_form')
+#1 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/input/index.php on line 8
+[17-Jun-2025 22:45:54 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'eghbxxte_rootNelstromo'@'localhost' to database 'contact_form' in /home4/eghbxxte/public_html/csis2440/input/index.php:8
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/input/index.php(8): mysqli->__construct('localhost', 'eghbxxte_rootNe...', Object(SensitiveParameterValue), 'contact_form')
+#1 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/input/index.php on line 8
+[17-Jun-2025 22:46:41 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'eghbxxte_rootNelstromo'@'localhost' to database 'contact_form' in /home4/eghbxxte/public_html/csis2440/input/index.php:8
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/input/index.php(8): mysqli->__construct('localhost', 'eghbxxte_rootNe...', Object(SensitiveParameterValue), 'contact_form')
+#1 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/input/index.php on line 8
+[17-Jun-2025 22:47:43 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'eghbxxte_rootNelstromo'@'localhost' to database 'contact_form' in /home4/eghbxxte/public_html/csis2440/input/index.php:8
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/input/index.php(8): mysqli->__construct('localhost', 'eghbxxte_rootNe...', Object(SensitiveParameterValue), 'contact_form')
+#1 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/input/index.php on line 8
+[17-Jun-2025 22:49:38 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'eghbxxte_rootNelstromo'@'localhost' to database 'contact_form' in /home4/eghbxxte/public_html/csis2440/input/index.php:8
+Stack trace:
+#0 /home4/eghbxxte/public_html/csis2440/input/index.php(8): mysqli->__construct('localhost', 'eghbxxte_rootNe...', Object(SensitiveParameterValue), 'contact_form')
+#1 {main}
+  thrown in /home4/eghbxxte/public_html/csis2440/input/index.php on line 8
